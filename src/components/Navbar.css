@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 3rem;
+    box-shadow: #333 0px 1px 5px ;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+   
+  }
+  .navbar a:hover {
+    border-bottom:solid 2px wheat;
+  }
+  .navbar a:active {
+    border-bottom:solid 2px rgb(165, 23, 23);
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+  }
