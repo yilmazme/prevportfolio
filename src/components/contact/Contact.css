@@ -1,0 +1,37 @@
+.modal {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-image:linear-gradient(to right, white, orange );
+    padding: 1rem;
+    text-align: left;
+    width: 30rem;
+    z-index: 10;
+    position: fixed;
+    top: 20vh;
+    left: calc(50% - 15rem);
+  }
+
+  #FaRegWindowClose{
+      position: absolute;
+      right: 0.2rem;
+      top: 0.2rem;
+      color: rgb(156, 26, 26);
+      background-color: white;
+      height: 1.4rem;
+      width: 1.4rem;
+      cursor: pointer;
+      border-radius: 50%;  
+  }
+  #FaRegWindowClose:hover{
+     color: red;    
+  }
+  p{
+      opacity: 0.82;
+      margin-top: 2px;
+  }
+  h4{
+      margin-bottom: 0px;
+  }
+  h5{
+      padding: 0px;
+  }

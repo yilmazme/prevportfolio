@@ -1,46 +1,85 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 import "./Navbar.css";
+import {FaHome} from "react-icons/fa";
+import Contact from './contact/Contact';
+import Backdrop from './contact/Backdrop';
+import Lang from "./languages/Lang";
+import Main from "./Main";
+import Fetch from "./fetch/Fetch";
 
-export default function Navbar(props) {
+
+
+export default function Navbar() {
+
+    const [show, setShow] = useState(false);
+
+    function showModal() {
+        setShow(true)
+    }
+    function closeModal() {
+        setShow(false)
+    }
+
+
     return (
-      
-        <Router>
-            <div className="navbar">
 
+        <div>
+            <Router>
+                <div className="navbar">
+
+                    <div id="home">
+                        <Link to="/home"><FaHome id="FaHome" /></Link>
+                    </div>
+
+                    <div className="nav-links">
+                        <div>
+                            <Link to="/langs">Languages</Link>
+                        </div>
+                        <div>
+                            <Link to="/repos">Repositories</Link>
+                        </div>
+                        <div>
+                            <Link to="/codes">Code Samples</Link>
+                        </div>
+                        <div>
+                            <Link to="/fetch">Fetch</Link>
+                        </div>
+                        <div>
+                            <a href="https://yilmazme.github.io" target="#">Old Site</a>
+                        </div>
+                        <div onClick={showModal}>
+                            <Link>Contact</Link>
+                        </div>
+                    </div>
+
+                </div>
                 <div>
-                    <Link to="/">HOME</Link>
+                    <Route exact path="/">
+                      <Redirect to="/home"/>  
+                    </Route>
+                    <Route path="/home">
+                        <Main/>
+                    </Route>
+                    <Route path="/langs">
+                        <Lang/>
+                    </Route>
+                    <Route path="/repos">
+                        Repositories
+                    </Route>
+                    <Route path="/codes">
+                        Codes
+                    </Route>
+                    <Route path="/fetch">
+                        <Fetch/>
+                    </Route>
                 </div>
 
-                <div className="nav-links">
-                    <div>
-                        <Link to="/fetch">Repositories</Link>
-                    </div>
-                    <div>
-                        <Link to="/counter">Codes Samples</Link>
-                    </div>
-                    <div>
-                        <a href="https://yilmazme.github.io" target="#">Old Site</a>
-                    </div>
-                    <div>
-                        <Link to="/contact">Contact</Link>
-                    </div>
-                </div>
+            </Router>
 
-            </div>
-            <Switch>
-                <Route path="/fetch">
-                    fetch
-                </Route>
-                <Route path="/counter">
-                    counter
-                </Route>
-                <Route path="/coun">
-                    Old Site
-                </Route>
-            </Switch>
-
-        </Router>
-   
+            {show && <Backdrop onClick={closeModal} />}
+            {show && <Contact onClick={closeModal} />}
+        </div>
     );
-  }
+}
   

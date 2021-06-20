@@ -1,19 +1,24 @@
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #333;
     color: white;
     height: 3rem;
     box-shadow: #333 0px 1px 5px ;
+    z-index: 100 ;
   }
   
-  .navbar a {
+  .nav-links a {
     color: white;
-    text-decoration: none;
-   
+    text-decoration: none;  
+  }
+  .nav-links a::before {
+    content: ">>";
+    color: rgb(241, 26, 213);
   }
   .navbar a:hover {
+    color: cadetblue;
     border-bottom:solid 2px wheat;
   }
   .navbar a:active {
@@ -21,6 +26,20 @@
   }
   .nav-links {
     display: flex;
-    justify-content: space-around;
-    width: 30vw;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin-right: 5vw;
+  }
+#home{
+  margin-left: 5vw;
+}
+  #FaHome{
+    color: white;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+  }
+
+  #FaHome :hover{
+    color: cadetblue;
   }

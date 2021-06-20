@@ -1,0 +1,25 @@
+.main-fetch{
+    background-color: aliceblue;
+    position: absolute;
+    top: 3rem;
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 0px;
+   
+}
+.user-card{
+    margin-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid brown;
+    width: 18rem;
+    height: 20rem;
+}
+img{
+    width: 14rem;
+}
+.warning{
+    color: black;
+}

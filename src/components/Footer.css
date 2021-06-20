@@ -1,0 +1,14 @@
+footer{
+    position: fixed;
+    bottom: 0px;
+    text-align: right;
+    padding: 0.5rem;
+    background-color: antiquewhite;
+    opacity: 0.4;
+    width: 100vw;
+    height: 1rem;
+    z-index: 100;
+}
+em{
+    margin-right: 2rem;
+}

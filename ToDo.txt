@@ -1,0 +1,7 @@
+- sql queries should be more secure
+- close button at contact modal should be fixed
+- create an apropriate database
+- need uniqe key in fetch
+- in navbar switch or div (div working)
+- error: uploading photo
+- need .env file for url and other sensitive info

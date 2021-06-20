@@ -1,0 +1,22 @@
+.intro1{
+    position: fixed;
+    top:3rem;
+    background-color: white;
+    width: 100vw;
+    height: calc(100vh - 5rem);
+    z-index: 1;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, white 80%, cadetblue 20% );
+    background-image: linear-gradient(to bottom right,cadetblue 20%, white 80% );
+  }
+  
+  .welcome{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50vw;
+    height: 50vh;
+    text-align: center;
+    padding: 1rem;
+    text-align: left;
+  }
