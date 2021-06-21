@@ -1,12 +1,79 @@
 .add-modal {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    background-color: white;
+    background-color: rgb(202, 226, 190);
     padding: 1rem;
-    text-align: left;
     width: 40rem;
+    height: auto;
     z-index: 10;
     position: fixed;
     top: 20vh;
     left: calc(50% - 15rem);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
+
+  form{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  input[type="submit"] {
+    position: absolute;
+    bottom: 2rem;
+    color: white;
+   background-color: rgb(37, 133, 37);
+    cursor: pointer;
+    border-radius: 10%;
+    border: 1px solid black;
+    width: 5rem;
+  }
+  input[type="submit"]:hover {
+   background-color: rgb(15, 97, 15);
+    border-radius: 10%;
+    border: 1px solid black;
+
+  }
+  input[type="submit"]:active {
+   background-color: rgb(15, 97, 15);
+    border-radius: 0%;
+    border: 2px solid rgb(241, 234, 234);
+
+  }
+  input{
+    background-color: rgb(219, 236, 236);
+    padding: 2px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 2px;
+  }
+  .add-modal img{
+    width: 12rem;
+    height: 16rem;
+    border-radius: 6px;
+    box-shadow: #333 3px 3px;
+  }
+  #file{
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+  }
+ 
+  #FaRegWindowClose_1{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    color: #333;
+    background-color: rgb(202, 226, 190);
+    height: 1.4rem;
+    width: 1.4rem;
+    cursor: pointer;
+    border-radius: 20%;
+}
+#FaRegWindowClose_1:hover{
+   color: red;    
+}

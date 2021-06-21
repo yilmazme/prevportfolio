@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
 
-        <div>
+        <div className="container">
             <Router>
                 <div className="navbar">
 
@@ -46,10 +46,10 @@ export default function Navbar() {
                             <Link to="/fetch">Fetch</Link>
                         </div>
                         <div>
-                            <a href="https://yilmazme.github.io" target="#">Old Site</a>
+                            <a href="https://yilmazme.github.io" target="_#">Old Site</a>
                         </div>
-                        <div onClick={showModal}>
-                            <Link>Contact</Link>
+                        <div onClick={showModal} className="contact-button">
+                            Contact
                         </div>
                     </div>
 

@@ -1,0 +1,12 @@
+.pic-div{
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    z-index: 4;
+}
+
+.pic-div img{
+    width: 600px;
+    height: 400px;
+    z-index: 15;
+}

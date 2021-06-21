@@ -3,8 +3,10 @@
     border-radius: 6px;
     background-image:linear-gradient(to right, white, orange );
     padding: 1rem;
+    padding-top: 1rem;
     text-align: left;
     width: 30rem;
+    height: 10rem;
     z-index: 10;
     position: fixed;
     top: 20vh;
@@ -15,12 +17,12 @@
       position: absolute;
       right: 0.2rem;
       top: 0.2rem;
-      color: rgb(156, 26, 26);
-      background-color: white;
+      color: #333;
+      background-color: orange;
       height: 1.4rem;
       width: 1.4rem;
       cursor: pointer;
-      border-radius: 50%;  
+      border-radius: 20%;
   }
   #FaRegWindowClose:hover{
      color: red;    

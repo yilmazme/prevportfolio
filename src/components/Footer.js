@@ -3,7 +3,7 @@ export default function Footer(){
 
     return(
         <footer>
-            <em>Powered by React.JS & .NET</em>
+            <p><em>Powered by React.JS & .NET</em></p>
         </footer>
     )
 }

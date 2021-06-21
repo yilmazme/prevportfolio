@@ -3,12 +3,17 @@ footer{
     bottom: 0px;
     text-align: right;
     padding: 0.5rem;
-    background-color: antiquewhite;
-    opacity: 0.4;
+    background-color: rgb(212, 197, 178);
+    opacity: 0.5;
     width: 100vw;
     height: 1rem;
     z-index: 100;
 }
 em{
     margin-right: 2rem;
+    
+}
+p{
+    opacity: 1;
+    margin-top: -3px;
 }

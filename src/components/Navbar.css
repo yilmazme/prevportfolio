@@ -1,19 +1,37 @@
+.container{
+  box-sizing: border-box;
+  padding: 0px;
+  width: 100vw;
+  height: auto;
+}
 .navbar {
+  position: fixed;
+  top: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
     color: white;
     height: 3rem;
+    width: 100vw;
     box-shadow: #333 0px 1px 5px ;
     z-index: 100 ;
   }
   
   .nav-links a {
     color: white;
-    text-decoration: none;  
+    text-decoration: none; 
+    border-bottom: solid 2px #333; 
+  }
+  .contact-button{
+    border-bottom: solid 2px #333; 
+    cursor: pointer;
   }
   .nav-links a::before {
+    content: ">>";
+    color: rgb(241, 26, 213);
+  }
+  .contact-button::before{
     content: ">>";
     color: rgb(241, 26, 213);
   }
@@ -21,7 +39,15 @@
     color: cadetblue;
     border-bottom:solid 2px wheat;
   }
+.contact-button:hover{
+  color: cadetblue;
+  border-bottom:solid 2px wheat;
+}
+
   .navbar a:active {
+    border-bottom:solid 2px rgb(165, 23, 23);
+  }
+  .contact-button:active{
     border-bottom:solid 2px rgb(165, 23, 23);
   }
   .nav-links {
@@ -33,13 +59,14 @@
 #home{
   margin-left: 5vw;
 }
-  #FaHome{
-    color: white;
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
-  }
 
-  #FaHome :hover{
+#FaHome{
+    color: white;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+
+#FaHome :hover{
     color: cadetblue;
-  }
+}

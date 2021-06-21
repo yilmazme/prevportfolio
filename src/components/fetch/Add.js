@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./Add.css";
+import {FaRegWindowClose} from "react-icons/fa"
 
 export default function Add(props) {
 
     const [user, setUser] = useState({ UserName: "", City: "", PhotoFileName: "anonymous.png" })
 
-    const APIUrl = "http://localhost:5000/api/users";
-    const PhotoUrl = "http://localhost:5000/Photos/";
+    const APIUrl = process.env.REACT_APP_USER_API;
+    const PhotoUrl = process.env.REACT_APP_PHOTO_PATH;
 
 
     function handleChange(ev) {
@@ -30,13 +31,14 @@ export default function Add(props) {
             })
         })
             .then((data) => data.json())
-            .then((result) => { alert(result) },
+            .then((result) => { alert(result); props.onClick() },
                 (error) => { alert(error) })
 
     }
 
     function handleFileSelected(event) {
         event.preventDefault();
+       if(event.target.files[0]){
         user.PhotoFileName = event.target.files[0].name;
         const formData = new FormData();
         formData.append(
@@ -45,7 +47,7 @@ export default function Add(props) {
             event.target.files[0].name
         );
 
-        fetch(PhotoUrl + "Users/SaveFile", {
+        fetch(APIUrl + "/SaveFile", {
             method: "POST",
             mode: "cors",
             body: formData
@@ -57,32 +59,35 @@ export default function Add(props) {
                 (error) => {
                     alert(error);
                 })
+       }
     }
 
     return (
         <div className="add-modal">
+            <div>
+            <img src={PhotoUrl + user.PhotoFileName} alt="asds" />
+            <input onChange={handleFileSelected} type="File" required id="file"/>
+            </div>
             <form onSubmit={handleSubmit}>
                 <label >
-                    Name:
+                    <h4>Full Name:</h4>
                     <input value={user.UserName} name="UserName" id="name"
-                        onChange={handleChange}>
+                        onChange={handleChange} required placeholder="Mehmet Yılmaz">
                     </input>
                 </label>
 
                 <label>
-                    Join From:
+                    <h4>Join From:</h4>
                     <input value={user.City} name="City" id="city"
-                        onChange={handleChange}>
+                        onChange={handleChange} required placeholder="Ankara">
                     </input>
                 </label>
 
                 <input type="submit" value="Submit" />
             </form>
-            <img width="200px" height="200px" src={PhotoUrl + user.PhotoFileName} alt="asds" />
-            <input onChange={handleFileSelected} type="File" />
-
-            <button onClick={props.onClick}>close</button>
-
+           
+          
+            <FaRegWindowClose onClick={props.onClick} id="FaRegWindowClose_1"/>
         </div>
     )
 }

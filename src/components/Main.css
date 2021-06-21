@@ -1,13 +1,11 @@
 .intro1{
-    position: fixed;
-    top:3rem;
     background-color: white;
     width: 100vw;
-    height: calc(100vh - 5rem);
+    height:100vh;
     z-index: 1;
     overflow: hidden;
-    background-image: linear-gradient(to bottom right, white 80%, cadetblue 20% );
-    background-image: linear-gradient(to bottom right,cadetblue 20%, white 80% );
+    background-image: linear-gradient(to bottom right, white 85%, cadetblue 15% );
+    border-top-left-radius: 20%;
   }
   
   .welcome{
