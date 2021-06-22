@@ -18,12 +18,15 @@ export default function Fetch() {
     }
     function closeModal() {
         setShowAdd(false)
+        setShowPic(false)
     }
-    function openPic() {
+    function openPic(x) {
         setShowPic(true)
+        console.log(x)
     }
     function closePic() {
         setShowPic(false)
+        setShowAdd(false)
     }
 
     const APIUrl = process.env.REACT_APP_USER_API;
@@ -60,16 +63,16 @@ export default function Fetch() {
                         Or you can just vote your favourite ones.
                     </p> */}
                 <button onClick={openModal}>Join Contest</button>
+             
                 </div>
                 <div className="card-group">
                     {
-                        state.users.map((user) => {
+                        state.users.map((user,ind) => {
                             return (
                                 <div key={uuid4()} className="user-card">
-                                    {showPic && <Picture source={PhotoUrl + user.PhotoFileName}  />}
-                                    {showPic && <Backdrop onClick={closePic} />}
+                                    {showPic && <Picture source={PhotoUrl + user.PhotoFileName}/>}
                                     <FaMapPin id="FaMapPin" />
-                                    <img src={user.PhotoFileName ? PhotoUrl + user.PhotoFileName : ""} alt="something" onClick={openPic} />
+                                    <img src={user.PhotoFileName ? PhotoUrl + user.PhotoFileName : ""} alt="something" onClick={()=>openPic(ind)}/>
                                     <h5>{user.UserName}</h5>
                                     <p>{user.DateOfJoining.substring(0, 10)}</p>
                                 </div>
@@ -77,8 +80,7 @@ export default function Fetch() {
                         })
                     }
 
-                    {showAdd && <Backdrop onClick={closeModal} />}
-                    {showAdd && <Add onClick={closeModal} />}
+                    {(showAdd || showPic) && <Backdrop onClick={closeModal} />}
                     {showAdd && <Add onClick={closeModal} />}
                 </div>
              
