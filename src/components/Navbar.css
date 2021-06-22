@@ -15,7 +15,7 @@
     height: 3rem;
     width: 100vw;
     box-shadow: #333 0px 1px 5px ;
-    z-index: 100 ;
+    z-index: 10 ;
   }
   
   .nav-links a {

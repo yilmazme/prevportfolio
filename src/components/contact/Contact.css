@@ -7,7 +7,7 @@
     text-align: left;
     width: 30rem;
     height: 10rem;
-    z-index: 10;
+    z-index: 12;
     position: fixed;
     top: 20vh;
     left: calc(50% - 15rem);

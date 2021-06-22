@@ -12,21 +12,23 @@ export default function Fetch() {
 
     const [showAdd, setShowAdd] = useState(false);
     const [showPic, setShowPic] = useState(false);
+    const [picId, setPicId] = useState(null);
+
+  
 
     function openModal() {
         setShowAdd(true)
     }
     function closeModal() {
         setShowAdd(false)
-        setShowPic(false)
     }
     function openPic(x) {
         setShowPic(true)
+        setPicId(x)
         console.log(x)
     }
     function closePic() {
         setShowPic(false)
-        setShowAdd(false)
     }
 
     const APIUrl = process.env.REACT_APP_USER_API;
@@ -67,20 +69,20 @@ export default function Fetch() {
                 </div>
                 <div className="card-group">
                     {
-                        state.users.map((user,ind) => {
+                        state.users.map((user) => {
                             return (
                                 <div key={uuid4()} className="user-card">
-                                    {showPic && <Picture source={PhotoUrl + user.PhotoFileName}/>}
+                                    
                                     <FaMapPin id="FaMapPin" />
-                                    <img src={user.PhotoFileName ? PhotoUrl + user.PhotoFileName : ""} alt="something" onClick={()=>openPic(ind)}/>
-                                    <h5>{user.UserName}</h5>
-                                    <p>{user.DateOfJoining.substring(0, 10)}</p>
+                                    <img src={user.PhotoFileName ? PhotoUrl + user.PhotoFileName : ""} alt="something" onClick={()=>openPic(user.UserId)}/>
+                                    <h5>{user.UserName}</h5>                         
+                                    <p>{user.DateOfJoining.substring(0, 10)}</p>                                    
                                 </div>
                             )
                         })
                     }
-
-                    {(showAdd || showPic) && <Backdrop onClick={closeModal} />}
+                    {showPic && <Picture source={PhotoUrl + state.users.filter((user)=>user.UserId === picId).map(x=> x.PhotoFileName)} onClick={closePic}/>}
+                    {showAdd && <Backdrop onClick={closeModal} />}
                     {showAdd && <Add onClick={closeModal} />}
                 </div>
              

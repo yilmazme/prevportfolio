@@ -5,7 +5,7 @@
     padding: 1rem;
     width: 40rem;
     height: auto;
-    z-index: 10;
+    z-index: 12;
     position: fixed;
     top: 20vh;
     left: calc(50% - 15rem);
