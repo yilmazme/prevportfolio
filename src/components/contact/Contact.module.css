@@ -13,7 +13,7 @@
     left: calc(50% - 15rem);
   }
 
-  #FaRegWindowClose{
+  .FaRegWindowClose{
       position: absolute;
       right: 0.2rem;
       top: 0.2rem;
@@ -24,7 +24,7 @@
       cursor: pointer;
       border-radius: 20%;
   }
-  #FaRegWindowClose:hover{
+  .FaRegWindowClose:hover{
      color: red;    
   }
   p{

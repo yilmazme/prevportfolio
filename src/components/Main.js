@@ -1,13 +1,25 @@
-import "./Main.css"
+import { useState } from "react";
+import styles from "./Main.module.css"
 import {FaMapPin} from "react-icons/fa";
 import mypic from "../pictures/mypic.jpg"
+import Contact from "./contact/Contact";
+import Backdrop from "./contact/Backdrop";
 
 export default function Main() {
 
+    const [show, setShow] = useState(false);
+
+    function showModal() {
+        setShow(true)
+    }
+    function closeModal() {
+        setShow(false)
+    }
+
     return (
       
-            <div className="main">
-                <div className="welcome">
+            <div className={styles.main}>
+                <div className={styles.welcome}>
                     <h3>Welcome</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -16,14 +28,16 @@ export default function Main() {
                         dolores culpa sed.
                     </p>
                 </div>
-                <div className="my-intro">
-                    <div className="my-card">
-                        <FaMapPin id="FaMapPin" />
+                <div className={styles.myIntro}>
+                    <div className={styles.myCard} onClick={showModal}>
+                        <FaMapPin className={styles.FaMapPin} />
                         <img src={mypic} alt="mypic"/>
                         <h5>Mehmet Yılmaz</h5>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
                     </div>
                 </div>
+                {show && <Backdrop onClick={closeModal} />}
+                {show && <Contact onClick={closeModal} />}
             </div>
     
     )

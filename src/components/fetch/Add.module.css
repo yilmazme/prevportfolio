@@ -1,4 +1,4 @@
-.add-modal {
+.addModal {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     background-color: rgb(202, 226, 190);
@@ -51,19 +51,19 @@
     border-radius: 6px;
     margin-top: 2px;
   }
-  .add-modal img{
+  .addModal img{
     width: 12rem;
     height: 16rem;
     border-radius: 6px;
     box-shadow: #333 3px 3px;
   }
-  #file{
+  .file{
     width: 50%;
     cursor: pointer;
     text-align: center;
   }
  
-  #FaRegWindowClose_1{
+  .FaRegWindowClose{
     position: absolute;
     right: 0.2rem;
     top: 0.2rem;
@@ -74,6 +74,6 @@
     cursor: pointer;
     border-radius: 20%;
 }
-#FaRegWindowClose_1:hover{
+.FaRegWindowClose:hover{
    color: red;    
 }

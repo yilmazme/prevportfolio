@@ -1,4 +1,4 @@
-.pic-div{
+.picDiv{
     position: fixed;
     z-index: 12;
     background-color: rgba(0, 0, 0, 0.85);
@@ -10,7 +10,7 @@
     overflow: scroll;
 }
 
-.pic-div img{
+.picDiv img{
     width: auto;
     height:auto;
     z-index: 11;
@@ -18,7 +18,7 @@
     margin-top: 3rem;
 }
 
-#FaRegWindowClose_2{
+.FaRegWindowClose{
     position: fixed;
     top: 0.8rem;
     color: rgb(202, 226, 190);
@@ -28,6 +28,6 @@
     cursor: pointer;
     border-radius: 20%;
 }
-#FaRegWindowClose_2:hover{
+.FaRegWindowClose:hover{
    color: white;    
 }

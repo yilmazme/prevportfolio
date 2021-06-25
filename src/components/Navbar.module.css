@@ -1,0 +1,119 @@
+.container{
+  box-sizing: border-box;
+  padding: 0px;
+  width: 100vw;
+  height: auto;
+}
+.navbar {
+  position: fixed;
+  top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 3rem;
+    width: 100vw;
+    box-shadow: #333 0px 1px 5px ;
+    z-index: 10 ;
+  }
+  
+  .navLinks a {
+    color: white;
+    text-decoration: none; 
+    border-bottom: solid 2px #333; 
+  }
+  .navbar a:hover {
+    color: cadetblue;
+    border-bottom:solid 2px wheat;
+  }
+  .contactBtn{
+    border-bottom: solid 2px #333; 
+    cursor: pointer;
+  }
+  .navLinks a::before {
+    content: ">>";
+    color: rgb(241, 26, 213);
+  }
+  .contactBtn::before{
+    content: ">>";
+    color: rgb(241, 26, 213);
+  }
+.contactBtn:hover{
+  color: cadetblue;
+  border-bottom:solid 2px wheat;
+}
+
+  .navbar a:active {
+    border-bottom:solid 2px rgb(165, 23, 23);
+  }
+  .contactBtn:active{
+    border-bottom:solid 2px rgb(165, 23, 23);
+  }
+  .navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin-right: 5vw;
+  }
+.home{
+  margin-left: 5vw;
+}
+
+.FaHome{
+    color: white;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+
+.FaHome :hover{
+    color: cadetblue;
+}
+
+@media (max-width:800px) {
+ 
+  .navbar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding-left: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      height: 100vh;
+      width: 6rem;
+      box-shadow: #333 0px 1px 5px ;
+      z-index: 10 ;
+     
+    }
+    .navLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width:auto;
+      height: 60vh;
+      font-size: 0.83rem;
+    }
+    .navLinks div{
+      width: 6rem;
+       text-align: center;
+       padding-left: 1rem;
+    }
+    .navLinks a::before {
+      content: unset;
+  
+    }
+    .contactBtn::before{
+      content: unset;
+ 
+    }
+    .home{
+      margin-left: unset;
+    }
+    
+}

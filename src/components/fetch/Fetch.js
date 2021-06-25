@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Fetch.css";
+import styles from "./Fetch.module.css";
 import Backdrop from "../contact/Backdrop";
 import Add from "./Add";
 import { v4 as uuid4 } from "uuid";
@@ -37,22 +37,24 @@ export default function Fetch() {
     useEffect(() => {
         fetch(APIUrl)
             .then((response) => response.json())
-            .then((data) => setState({ users: data, load: true }))
-            .catch((err)=>{setState({...state, load:true, error:err})})
+            .then((data) => setState({...state, users: data, load: true }))
+            .catch((err)=>{setState({...state, load:true, error:err})
+                console.log(err)
+        })
             console.log("fetched")
     }, [showAdd])
 
-    if (state.error) {
-        return <div className="warning text-center m-2">There is a problem with source or your internet connection.</div>;
+    if (state.error !== null || state.users.length === 0) {
+        return <div className={styles.warning + "text-center m-2"}>There is a problem with source or your internet connection.</div>;
     }
     else if (!state.load) {
-        return <div className="text-center m-2">Loading...</div>
+        return <div className={"text-center m-2"}>Loading...</div>
     }
     else {
         return (
-            <div className="main-fetch">
-                <div className="intro-fetch">
-                    <h4 className="m-2">Hola!</h4>
+            <div className={styles.main}>
+                <div className={styles.introFetch}>
+                    <h4 className={"m-2"}>Hola!</h4>
                     <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus 
                     accusantium nemo totam minus, ducimus, tenetur odit aperiam quis id perferendis 
@@ -67,13 +69,13 @@ export default function Fetch() {
                 <button onClick={openModal}>Join Contest</button>
              
                 </div>
-                <div className="card-group">
+                <div className={styles.cardGroup}>
                     {
                         state.users.map((user) => {
                             return (
-                                <div key={uuid4()} className="user-card">
+                                <div key={uuid4()} className={styles.userCard}>
                                     
-                                    <FaMapPin id="FaMapPin" />
+                                    <FaMapPin className={styles.FaMapPin} />
                                     <img src={user.PhotoFileName ? PhotoUrl + user.PhotoFileName : ""} alt="something" onClick={()=>openPic(user.UserId)}/>
                                     <h5>{user.UserName}</h5>                         
                                     <p>{user.DateOfJoining.substring(0, 10)}</p>                                    

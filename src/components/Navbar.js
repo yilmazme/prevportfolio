@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import {FaHome} from "react-icons/fa";
 import Contact from './contact/Contact';
 import Backdrop from './contact/Backdrop';
@@ -24,15 +24,15 @@ export default function Navbar() {
 
     return (
 
-        <div className="container">
+        <div className={styles.container}>
             <Router>
-                <div className="navbar">
+                <div className={styles.navbar}>
 
-                    <div id="home">
-                        <Link to="/home"><FaHome id="FaHome" /></Link>
+                    <div className={styles.home}>
+                        <Link to="/home"><FaHome className={styles.FaHome} /></Link>
                     </div>
 
-                    <div className="nav-links">
+                    <div className={styles.navLinks}>
                         <div>
                             <Link to="/langs">Languages</Link>
                         </div>
@@ -48,8 +48,8 @@ export default function Navbar() {
                         <div>
                             <a href="https://yilmazme.github.io" target="_#">Old Site</a>
                         </div>
-                        <div onClick={showModal} className="contact-button">
-                            Contact
+                        <div onClick={showModal} className={styles.contactBtn}>
+                           Contact
                         </div>
                     </div>
 

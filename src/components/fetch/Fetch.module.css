@@ -1,4 +1,4 @@
-.main-fetch{
+.main{
     box-sizing: border-box;
     margin: 0px;
     background-color: antiquewhite;
@@ -10,7 +10,7 @@
     grid-template-columns: 20vw 70vw;
     justify-content: space-evenly;
 }
-.intro-fetch{
+.introFetch{
     position: -webkit-sticky; /* Safari */
     position: sticky;
     height: 100vh;
@@ -22,20 +22,21 @@
    background-color: rgb(141, 199, 199);
    padding: 1rem;
 }
-.intro-fetch p{
+.introFetch p{
 line-height: 1.4;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.card-group{
+.cardGroup{
 
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 0px;
 }
-.user-card{
+.userCard{
     margin-top: 1rem;
     text-align: center;
     padding: 5px;
+    padding-top: 1rem;
     border: 1px solid rgb(114, 76, 76);
     width: 18rem;
     height: 20rem;
@@ -43,24 +44,25 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow:rgb(83, 81, 81) 3px 3px 3px;
     background-color: rgb(250, 250, 149);
 }
-.user-card:hover{
+.userCard:hover{
     border: 1px solid rgb(133, 83, 83);
     border-radius: 3px;
     box-shadow:rgb(134, 129, 129) 3px 3px 3px;
 }
-.user-card img{
+.userCard img{
     width: 12rem;
     height: 16rem;
     transform: rotateZ(-6deg);
     cursor: pointer;
 }
-.user-card img:hover{
+.userCard img:hover{
     width: 12rem;
     height: 16rem;
-    transform: rotateZ(6deg);
+    transform: rotateZ(0deg);
     transition-duration: 1s;
 }
 .warning{
+    margin-top: 5rem;
     color: black;
 }
 h5{
@@ -74,7 +76,7 @@ button{
     margin-top: 3rem;
     height: 2rem;
 }
-#FaMapPin{
+.FaMapPin{
   position: relative;
   bottom: 16rem;
   left: 11rem;

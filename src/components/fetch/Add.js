@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Add.css";
+import styles from"./Add.module.css";
 import {FaRegWindowClose} from "react-icons/fa"
 
 export default function Add(props) {
@@ -63,10 +63,10 @@ export default function Add(props) {
     }
 
     return (
-        <div className="add-modal">
+        <div className={styles.addModal}>
             <div>
             <img src={PhotoUrl + user.PhotoFileName} alt="asds" />
-            <input onChange={handleFileSelected} type="File" required id="file"/>
+            <input onChange={handleFileSelected} type="File" required className={styles.file}/>
             </div>
             <form onSubmit={handleSubmit}>
                 <label >
@@ -87,7 +87,7 @@ export default function Add(props) {
             </form>
            
           
-            <FaRegWindowClose onClick={props.onClick} id="FaRegWindowClose_1"/>
+            <FaRegWindowClose onClick={props.onClick} className={styles.FaRegWindowClose}/>
         </div>
     )
 }
