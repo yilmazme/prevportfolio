@@ -19,7 +19,7 @@
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;
-   background-color: rgb(141, 199, 199);
+   background-color: white;
    padding: 1rem;
 }
 .introFetch p{
@@ -33,6 +33,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     column-gap: 0px;
 }
 .userCard{
+    position: relative;
     margin-top: 1rem;
     text-align: center;
     padding: 5px;
@@ -82,4 +83,56 @@ button{
   left: 11rem;
   color: red;
   z-index: 1;
+}
+.FullscreenIcon{
+    font-size: large;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color:#333;
+    cursor: pointer;
+}
+.FullscreenIcon:hover{
+    font-size: x-large;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.submitBtn{
+    width: 20%;
+    margin-bottom: 2rem;
+    height: 1.6rem;
+    background-color: aliceblue;
+    color: #333;
+    border: 1px solid black;
+}
+.input{
+    margin-top: 1rem;
+    width: 80%;
+    padding-left:4px;
+}
+.FavoriteIcon{
+    color: red;
+    font-size: large;
+}
+span{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    padding: 0px;
+    margin: auto;
 }

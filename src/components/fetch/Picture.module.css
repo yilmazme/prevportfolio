@@ -18,16 +18,20 @@
     margin-top: 3rem;
 }
 
-.FaRegWindowClose{
+.FullscreenExitIcon{
     position: fixed;
+    font-size: large;
     top: 0.8rem;
-    color: rgb(202, 226, 190);
-    background-color: #333 ;
+    color: white;
+    background-color: black;
     height: 1.4rem;
     width: 1.4rem;
     cursor: pointer;
     border-radius: 20%;
+    z-index: 17;
 }
-.FaRegWindowClose:hover{
-   color: white;    
+.FullscreenExitIcon:hover{
+   color: white; 
+   height: 1.6rem;
+   width: 1.6rem;  
 }

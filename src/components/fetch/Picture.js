@@ -1,11 +1,11 @@
 import styles from "./Picture.module.css";
-import {FaRegWindowClose} from "react-icons/fa"
+import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
 
 export default function Picture(props){
 
     return(
         <div className={styles.picDiv}>
-            <FaRegWindowClose onClick={props.onClick} className={styles.FaRegWindowClose}/>
+            <FullscreenExitIcon onClick={props.onClick} className={styles.FullscreenExitIcon}/>
             <img id={props.id} src={props.source} alt="sdsf"/>
         </div>
     )
