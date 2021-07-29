@@ -6,14 +6,7 @@ footer{
     background-color: rgb(212, 197, 178);
     opacity: 0.7;
     width: 100vw;
-    height: 1rem;
+    height: 2rem;
     z-index: 100;
 }
-em{
-    margin-right: 2rem;
-    
-}
-p{
-    opacity: 1;
-    margin-top: -3px;
-}
+

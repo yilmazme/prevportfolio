@@ -4,6 +4,7 @@ body {
   font-size: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 .home-page {
   margin: 0px;

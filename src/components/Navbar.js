@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import styles from "./Navbar.module.css";
+import "./Navbar.css";
 import {FaHome} from "react-icons/fa";
 import Contact from './contact/Contact';
 import Backdrop from './contact/Backdrop';
-import Lang from "./languages/Lang";
 import Main from "./Main";
 import Fetch from "./fetch/Fetch";
+import Repository from "./repositories/Repository";
+import Code from "./codes/Code";
 
 
 
@@ -21,39 +22,40 @@ export default function Navbar() {
         setShow(false)
     }
 
-
     return (
 
-        <div className={styles.container}>
+        <div className="navContainer">
             <Router>
-                <div className={styles.navbar}>
+                <nav>
 
-                    <div className={styles.home}>
-                        <Link to="/home"><FaHome className={styles.FaHome} /></Link>
+                    <div className="homeIcon">
+                        <Link to="/home"><FaHome className="FaHome" /></Link>
                     </div>
 
-                    <div className={styles.navLinks}>
+                    <div className="navLinks">
+                      
                         <div>
-                            <Link to="/langs">Languages</Link>
+                            <Link to="/repos">Works</Link>
                         </div>
+                        
                         <div>
-                            <Link to="/repos">Repositories</Link>
+                            <Link to="/fetch">API Fetch</Link>
                         </div>
                         <div>
                             <Link to="/codes">Code Samples</Link>
                         </div>
                         <div>
-                            <Link to="/fetch">Fetch</Link>
+                            <a href="https://github.com/yilmazme" target="_#">GitHub</a>
+                        </div>
+                        <div onClick={showModal} className="contactBtn">
+                           Contact
                         </div>
                         <div>
                             <a href="https://yilmazme.github.io" target="_#">Old Site</a>
                         </div>
-                        <div onClick={showModal} className={styles.contactBtn}>
-                           Contact
-                        </div>
                     </div>
 
-                </div>
+                </nav>
                 <div>
                     <Route exact path="/">
                       <Redirect to="/home"/>  
@@ -61,22 +63,18 @@ export default function Navbar() {
                     <Route path="/home">
                         <Main/>
                     </Route>
-                    <Route path="/langs">
-                        <Lang/>
-                    </Route>
+                   
                     <Route path="/repos">
-                        Repositories
+                        <Repository/>
                     </Route>
                     <Route path="/codes">
-                        Codes
+                        <Code/>
                     </Route>
                     <Route path="/fetch">
                         <Fetch/>
                     </Route>
                 </div>
-
             </Router>
-
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
         </div>

@@ -1,30 +1,29 @@
-.modal {
+.contactModal {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    background-image:linear-gradient(to right, white, orange );
+    background-image:linear-gradient(to right, rgb(234, 236, 215), rgb(223, 245, 239) );
     padding: 1rem;
     padding-top: 1rem;
     text-align: left;
     width: 30rem;
-    height: 10rem;
+    height: 12rem;
     z-index: 12;
     position: fixed;
     top: 20vh;
     left: calc(50% - 15rem);
   }
 
-  .FaRegWindowClose{
+  .CloseIcon{
       position: absolute;
       right: 0.2rem;
       top: 0.2rem;
       color: #333;
-      background-color: orange;
       height: 1.4rem;
       width: 1.4rem;
       cursor: pointer;
       border-radius: 20%;
   }
-  .FaRegWindowClose:hover{
+  .CloseIcon:hover{
      color: red;    
   }
   p{

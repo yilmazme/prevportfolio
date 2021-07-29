@@ -1,8 +1,0 @@
-.main{
-    position: fixed;
-    top: 3rem;
-    width: 100vw;
-    height: calc(100vh - 5rem);
-    background-color: rgb(221, 209, 209);
-    text-align: center;
-}

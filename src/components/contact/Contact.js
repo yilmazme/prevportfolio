@@ -1,6 +1,5 @@
-import styles from "./Contact.module.css";
-import {FaRegWindowClose} from "react-icons/fa"
-
+import "./Contact.css";
+import CloseIcon from '@material-ui/icons/Close';
 
 export default function Contact(props){
 
@@ -8,8 +7,8 @@ export default function Contact(props){
 
 
     return(
-        <div className={styles.modal}>
-                <div>
+        <div className="contactModal">
+                <div className="my-4">
                     <h4>
                         Mehmet Yılmaz
                     </h4>
@@ -17,7 +16,7 @@ export default function Contact(props){
                     <h5>Phone: +90 538 476 1082</h5>
                     <h5>E-mail: 10myilmaz@gmail.com</h5>
                 </div>
-                <FaRegWindowClose onClick={props.onClick} className={styles.FaRegWindowClose}/>
+                <CloseIcon onClick={props.onClick} className="CloseIcon"/>
         </div>
     )
 }

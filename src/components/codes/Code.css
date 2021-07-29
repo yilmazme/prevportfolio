@@ -1,0 +1,21 @@
+.codeMain{
+    padding: 3rem 0 3rem 0;
+    background-color: rgb(182, 228, 230);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 90%;  
+}
+.buttonGroup{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: bisque;
+}
+.codeArea{
+    background-color: white;
+    height: 100vh;
+    text-align: center;
+   
+}

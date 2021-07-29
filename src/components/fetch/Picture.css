@@ -11,17 +11,20 @@
 }
 
 .picDiv img{
-    width: auto;
+    width: 80vw;
     height:auto;
     z-index: 11;
     align-self: center;
-    margin-top: 3rem;
+    margin-top: 3rem !important;
+    margin-left: 2rem;
+    margin: auto;
 }
 
 .FullscreenExitIcon{
     position: fixed;
-    font-size: large;
-    top: 0.8rem;
+    font-size: x-large;
+    top: 1rem;
+    right: 2rem;
     color: white;
     background-color: black;
     height: 1.4rem;

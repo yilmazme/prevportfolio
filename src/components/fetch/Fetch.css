@@ -1,7 +1,7 @@
-.main{
+.fetchMain{
     box-sizing: border-box;
     margin: 0px;
-    background-color: antiquewhite;
+    background-color: #dcfaf6;
     position: absolute;
     top: 3rem;
     width: 100%;
@@ -34,9 +34,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .userCard{
     position: relative;
+    margin: auto;
     margin-top: 1rem;
-    text-align: center;
-    padding: 5px;
     padding-top: 1rem;
     border: 1px solid rgb(114, 76, 76);
     width: 18rem;
@@ -55,6 +54,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 16rem;
     transform: rotateZ(-6deg);
     cursor: pointer;
+    margin: auto;
 }
 .userCard img:hover{
     width: 12rem;
@@ -69,18 +69,10 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 h5{
     margin: 2px;
 }
-button{
-    background-color: black;
-    color: white;
-    border: 1px solid green;
-    border-radius: 6px;
-    margin-top: 3rem;
-    height: 2rem;
-}
 .FaMapPin{
   position: relative;
-  bottom: 16rem;
-  left: 11rem;
+  top:2px;
+  left: 13rem;
   color: red;
   z-index: 1;
 }
@@ -105,16 +97,17 @@ button{
 }
 .submitBtn{
     width: 20%;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
     height: 1.6rem;
-    background-color: aliceblue;
+    background-color: white;
     color: #333;
-    border: 1px solid black;
+   
 }
 .input{
     margin-top: 1rem;
     width: 80%;
     padding-left:4px;
+    border: 1px solid black;
 }
 .FavoriteIcon{
     color: red;
