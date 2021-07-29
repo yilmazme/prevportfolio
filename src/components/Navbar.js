@@ -51,7 +51,7 @@ export default function Navbar() {
                            Contact
                         </div>
                         <div>
-                            <a href="https://yilmazme.github.io" target="_#">Old Site</a>
+                            <a href="https://my-old-portfolio.netlify.app/" target="_#">Old Site</a>
                         </div>
                     </div>
 

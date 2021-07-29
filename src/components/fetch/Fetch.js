@@ -36,8 +36,8 @@ export default function Fetch() {
     // const APIUrl = process.env.REACT_APP_USER_API;
     // const PhotoUrl = process.env.REACT_APP_PHOTO_PATH;
 
-    const API_KEY = process.env.REACT_APP_API_KEY;
-    var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(query);
+    //const API_KEY = process.env.REACT_APP_API_KEY;
+    var URL = "https://pixabay.com/api/?key=22251568-17fb9ec45c88359d744e947a8&q="+encodeURIComponent(query);
 
     useEffect(() => {
         fetch(URL)
