@@ -10,3 +10,8 @@ footer{
     z-index: 100;
 }
 
+@media (max-width:1035px) {
+    footer{
+        padding-right: 0px;
+    }
+}
