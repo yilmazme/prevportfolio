@@ -14,4 +14,7 @@ footer{
     footer{
         padding-right: 0px;
     }
+    footer p{
+        text-align: left;
+    }
 }
