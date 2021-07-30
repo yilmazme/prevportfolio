@@ -30,7 +30,7 @@ export default function Main() {
                     <br/>
                     Here on this site, you can find some of my works, experiences, and mistakes.
                     The site is not complete and it won't be any time soon.
-                    Well not because I am lazy, new things to be learned are infinite as you know <>&#128516;</>.
+                    Well,it is not because I am lazy, it is because there will always be new things to learn and add to the site<>&#128513;</>.
                 </p>
             </div>
             <div className="myPicDiv bg-blue-100 rounded-xl">
