@@ -129,3 +129,44 @@ span{
     padding: 0px;
     margin: auto;
 }
+
+@media (max-width:1035px) {
+    .fetchMain{
+        box-sizing: border-box;
+        margin: 0px;
+        background-color: #dcfaf6;
+        position: absolute;
+        top: 3rem;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 20vw 70vw;
+        justify-content: space-evenly;
+    }
+    .introFetch{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        height: 100vh;
+        top: 3rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: center;
+       background-color: white;
+       padding: 2px;
+    }
+ 
+    .cardGroup{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0px;
+    }
+}
+
+@media (max-width:600px) {
+.cardGroup{
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 0px;
+}
+}

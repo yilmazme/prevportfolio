@@ -36,3 +36,20 @@
   h5{
       padding: 0px;
   }
+
+  @media (max-width:1035px) {
+    .contactModal{
+      text-align: center;
+    }
+  
+    .CloseIcon{
+      position: absolute;
+      right: 50%;
+      top: 0.2rem;
+      color: #333;
+      height: 1.4rem;
+      width: 1.4rem;
+      cursor: pointer;
+      border-radius: 20%;
+  }
+}
