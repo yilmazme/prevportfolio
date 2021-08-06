@@ -7,6 +7,7 @@ import drag  from "../../pictures/drag_drop.PNG"
 import puzzle  from "../../pictures/puzzle.PNG"
 import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
+import search  from "../../pictures/search.PNG"
 
 
 export default function Repository(){
@@ -22,6 +23,11 @@ setTimeout(()=>{
 },[])
     return (
         <div className="repoMain text-center align-center">
+            <div className="cell">
+                <a href="https://my-search.netlify.app/" target="_blank" rel="noreferrer">
+                    {pictures.length === 0 ? null : <img src={search} alt="search" />}
+                </a>
+            </div>
             <div className="cell">
                 <a href="https://pntn-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={panteo} alt="panteo" />}
