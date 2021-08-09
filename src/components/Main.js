@@ -5,7 +5,8 @@ import mypic from "../pictures/mypic.jpg"
 import Contact from "./contact/Contact";
 import Backdrop from "./contact/Backdrop";
 import SearchIcon from '@material-ui/icons/Search';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import Carous from "./carousel/Carousel";
 
 export default function Main() {
 
@@ -32,7 +33,7 @@ export default function Main() {
                         <br />
                         Here on this site, you can find some of my works, experiences, and mistakes.
                         The site is not complete and it won't be any time soon.
-                        Well,it is not because I am lazy, it is because there will always be new things to learn and add to the site <>&#128513;</>.
+                        Well,it is not because I am lazy, it is because there will always be new things to learn and add to the site <>	&#128522;</>.
                     </p>
                 </div>
                 <div className="myCard" onClick={showModal}>
@@ -67,7 +68,7 @@ export default function Main() {
                     <Link to="/repos">< SearchIcon className="searchIcon" /></Link>
                 </p>
             </div>
-
+            <Carous/>
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
         </div>
