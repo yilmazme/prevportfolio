@@ -6,6 +6,7 @@ import puzzle  from "../../pictures/puzzle.PNG"
 import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
 import search  from "../../pictures/search.PNG"
+import evre  from "../../pictures/evre.PNG"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -16,35 +17,57 @@ export default function Carous(){
             <Carousel autoPlay showThumbs={false} dynamicHeight={false} infiniteLoop={true}>
                 <div>
                     <img src={aile} alt="aile"/>
-                    <p className="legend">Aile Bul</p>
+                    <a href="https://ailebul.herokuapp.com/" target="_blank" rel="noreferrer">
+                        <p className="legend">Aile Bul</p>
+                    </a>  
                 </div>
                 <div>
                     <img src={panteo} alt="panteo" />
-                    <p className="legend">Panteo</p>
+                    <a href="https://pntn-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Resize, Drag & Drop</p>
+                    </a>
                 </div>
                 <div>
                     <img src={blog} alt="blog"/>
-                    <p className="legend">Blog</p>
+                    <a href="https://yilmazblog.herokuapp.com/" target="_blank" rel="noreferrer">
+                        <p className="legend">Blog</p>
+                    </a>
                 </div>
                 <div>
                     <img src={drag} alt="drag"/>
-                    <p className="legend">Drag</p>
+                    <a href="https://dragdropdemo.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Drag & Drop</p>
+                    </a>
                 </div>
                 <div>
                     <img src={puzzle} alt="puzzle"/>
-                    <p className="legend">Puzzle</p>
+                    <a href="https://puzzle-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Puzzle</p>
+                    </a>
                 </div>
                 <div>
                     <img src={wincar} alt="wincar"/>
-                    <p className="legend">Wincar</p>
+                    <a href="https://wincar-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Car Game</p>
+                    </a>
                 </div>
                 <div>
                     <img src={balls} alt="balls"/>
-                    <p className="legend">Balls</p>
+                    <a href="https://balls-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Heavy Ball</p>
+                    </a>
                 </div>
                 <div>
-                    <img src={search} alt="search"/>
-                    <p className="legend">Search</p>
+                    <img src={search} alt="search"/>               
+                    <a href="https://my-search.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Search Engine</p>
+                    </a>
+                </div>
+                <div>
+                    <img src={evre} alt="evre"/>
+                    <a href="https://evreka-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                        <p className="legend">Complex Table</p>
+                    </a>
                 </div>
             </Carousel>
 

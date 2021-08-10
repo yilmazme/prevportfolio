@@ -8,7 +8,7 @@ import puzzle  from "../../pictures/puzzle.PNG"
 import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
 import search  from "../../pictures/search.PNG"
-
+import evre from "../../pictures/evre.PNG"
 
 export default function Repository(){
 
@@ -61,6 +61,11 @@ setTimeout(()=>{
             <div className="cell">
                 <a href="https://balls-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={balls} alt="balls" />}
+                </a>
+            </div>
+            <div className="cell">
+                <a href="https://evreka-yilmaz.netlify.app/" target="_blank" rel="noreferrer">
+                    {pictures.length === 0 ? null : <img src={evre} alt="evre" />}
                 </a>
             </div>
             <div className="cell text-white py-10">
