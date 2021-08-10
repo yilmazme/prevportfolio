@@ -67,7 +67,7 @@ export default function Fetch() {
                         </button>
                     </form>
                     <br/>
-                    <h4 className="h5 my-2 text-center">Merhaba!</h4>
+                    <h4 className="h5 my-1 px-4 ">Merhaba!</h4>
                     <p className="px-6 text-left leading-8 font-thin">
                     Bu sayfada arama kutucuğuna istediğiniz, tabi fotoğrafı olabilecek ifadeleri yazıp <i>Pixabay </i>
                     sitesinden fotoğrafları siteye çekebilirsiniz. Fotoğrafı büyütüp HD kalitesinde bakabilirsiniz.
