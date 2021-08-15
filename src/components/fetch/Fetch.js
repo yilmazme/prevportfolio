@@ -56,10 +56,10 @@ export default function Fetch() {
     }, [search])
 
     if (state.error !== null) {
-        return <div className="warning text-center m-2">There is a problem with source or your internet connection.</div>;
+        return <div className="warning text-center m-5 p-1">There is a problem with source or your internet connection.</div>;
     }
     else if (!state.load) {
-        return <div className="text-center m-2">Loading...</div>
+        return <div className="text-center m-5">Loading...</div>
     }
     else {
         return (

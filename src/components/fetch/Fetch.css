@@ -171,15 +171,16 @@ span{
     grid-template-columns: auto;
     column-gap: 0px;
 }
-.form{
-
+.warning{
+width: 70%;
+padding-left:0px;
 }
 .introFetch{
     position: fixed;
     top: 0px;
     z-index: 7; 
     height: 4rem; 
-    width: 80%;
+    width: 84%;
 }
 .introFetch p, h4{
     display: none;
