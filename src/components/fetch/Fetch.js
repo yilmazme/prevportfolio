@@ -16,7 +16,7 @@ export default function Fetch() {
 
     const [showPic, setShowPic] = useState(false);
     const [picId, setPicId] = useState(null);
-    const [query, setQuery]=useState("dark night")
+    const [query, setQuery]=useState("italy")
     const [search, setSearch]=useState(0)
   
     function openPic(x) {
@@ -35,11 +35,15 @@ export default function Fetch() {
         console.log("searched: " + search)
     }
 
+    // these were for backend
     // const APIUrl = process.env.REACT_APP_USER_API;
     // const PhotoUrl = process.env.REACT_APP_PHOTO_PATH;
 
-    //const API_KEY = process.env.REACT_APP_API_KEY;
-    var URL = "https://pixabay.com/api/?key=22251568-17fb9ec45c88359d744e947a8&q="+encodeURIComponent(query);
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    var uriQuery = encodeURIComponent(query);
+    var URL =`https://pixabay.com/api/?key=${API_KEY}&q=${uriQuery}`
+    
+  
 
     useEffect(() => {
         fetch(URL)
@@ -83,8 +87,8 @@ export default function Fetch() {
                                 return  <div className="text-center m-2">No Photos Found...</div>
                             }
                             return (
-                                <Fade>
-                                    <div key={uuid4()} className="userCard">
+                                <Fade key={uuid4()}>
+                                    <div  className="userCard">
                                     <FullscreenIcon className="FullscreenIcon" onClick={()=>openPic(photo.id)}/>
                                     <FaMapPin className="FaMapPin" />
                                     <img src={photo.largeImageURL} alt="something" onClick={()=>openPic(photo.id)}/>

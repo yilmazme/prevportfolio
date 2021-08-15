@@ -19,3 +19,21 @@
     text-align: center;
    
 }
+
+@media (max-width:1035px) {
+    .codeMain{
+        padding-top: 0px;
+    }
+    .codeArea{
+        display: none;
+    }
+    .buttonGroup{
+        height: 10vh;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgb(182, 228, 230);
+    }
+}

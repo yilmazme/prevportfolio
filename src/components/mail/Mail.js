@@ -28,7 +28,7 @@ function Mail() {
     function sendEmail(e) {
         e.preventDefault();
         if (valid) {
-            emailjs.sendForm('service_cq378e8', 'template_7mqap21', e.target, 'user_PYNOd7gIkSXASF5nilh6m')
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLETE_ID, e.target, process.env.REACT_APP_USER_ID)
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {

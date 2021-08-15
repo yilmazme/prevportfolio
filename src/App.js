@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Mail from './components/mail/Mail';
 
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="home-page">
       <Navbar/>
+      <Mail/>
       <Footer/>
     </div>
   );

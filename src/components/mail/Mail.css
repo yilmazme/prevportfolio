@@ -206,12 +206,17 @@
   }
   
   @media screen and (max-width: 600px) {
-    .screen-body {
-      padding: 40px;
+    .screen{
+    
+
     }
-  
-    .screen-body-item {
-      padding: 0;
+    .mailMainToOpen{
+      left: 1rem;
+      transform: translate(0,0);
+    }
+    .mailMainToClose{
+      left: 1rem;
+      transform: translate(0,0);
     }
   }
   
