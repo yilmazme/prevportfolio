@@ -25,6 +25,7 @@ export default function Code(){
                         <Dropdown.Item eventKey="1" onClick={()=>setPage(0)}>JavaScript</Dropdown.Item>
                         <Dropdown.Item eventKey="2" onClick={()=>setPage(1)}>C#</Dropdown.Item>
                         <Dropdown.Item eventKey="3" onClick={()=>setPage(-1)}>Python</Dropdown.Item>
+                        <hr></hr>
                         <Dropdown.Item eventKey="4" onClick={()=>setPage(-1)}>HTML</Dropdown.Item>
                         <Dropdown.Item eventKey="5" onClick={()=>setPage(-1)}>CSS</Dropdown.Item>
                         

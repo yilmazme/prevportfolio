@@ -9,6 +9,7 @@ import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
 import search  from "../../pictures/search.PNG"
 import evre from "../../pictures/evre.PNG"
+import Pulse from 'react-reveal/Pulse';
 
 export default function Repository(){
 
@@ -23,6 +24,7 @@ setTimeout(()=>{
 },[])
     return (
         <div className="repoMain text-center align-center">
+            <Pulse>
             <div className="cell">
                 <a href="https://my-search.netlify.app/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={search} alt="search" />}
@@ -72,7 +74,7 @@ setTimeout(()=>{
                 <i className="fas fa-tools"></i>
                 <p className="my-2">Something under construction !</p>
             </div>
-
+            </Pulse>
         </div>
     )
 }

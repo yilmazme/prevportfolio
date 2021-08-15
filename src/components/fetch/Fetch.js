@@ -6,6 +6,8 @@ import Picture from "./Picture";
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SearchIcon from '@material-ui/icons/Search';
+import Fade from 'react-reveal/Fade';
+
 
 export default function Fetch() {
 
@@ -81,13 +83,15 @@ export default function Fetch() {
                                 return  <div className="text-center m-2">No Photos Found...</div>
                             }
                             return (
-                                <div key={uuid4()} className="userCard">
+                                <Fade>
+                                    <div key={uuid4()} className="userCard">
                                     <FullscreenIcon className="FullscreenIcon" onClick={()=>openPic(photo.id)}/>
                                     <FaMapPin className="FaMapPin" />
                                     <img src={photo.largeImageURL} alt="something" onClick={()=>openPic(photo.id)}/>
                                     <p className="py-1 px-1">Foto Sahibi: <em>{photo.user.substring(0,12)}</em></p>                         
                                     <span className="-my-4">{photo.likes}<FavoriteIcon className="FavoriteIcon"/></span>                                    
                                 </div>
+                                </Fade>
                             )
                         })
                     }

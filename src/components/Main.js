@@ -4,6 +4,7 @@ import {FaMapPin} from "react-icons/fa";
 import mypic from "../pictures/mypic.jpg"
 import Contact from "./contact/Contact";
 import Backdrop from "./contact/Backdrop";
+import Mail from "./mail/Mail"
 import SearchIcon from '@material-ui/icons/Search';
 import { Link} from 'react-router-dom';
 import Carous from "./carousel/Carousel";
@@ -40,7 +41,7 @@ export default function Main() {
                     <FaMapPin className="MainfaMapPin" />
                     <img src={mypic} alt="mypic" />
                     <h5 className="font-bold">Mehmet Yılmaz</h5>
-                    <p><em>Yee, this is me.</em></p>
+                    <p><em>Yeah, this is me.</em></p>
                 </div>
             </div>
 
@@ -69,6 +70,7 @@ export default function Main() {
                 </p>
             </div>
             <Carous/>
+            <Mail/>
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
         </div>
