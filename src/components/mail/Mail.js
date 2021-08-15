@@ -35,12 +35,16 @@ function Mail() {
                     console.log(error.text);
                 });
                 setEmail('')
+                setTimeout(()=>{
+                    alert("Your email delivered successfully!")
+                }, 400)
         }
         else{
             setEmail("enter a valid email")
         }
        
     }
+   
 
     return (
         <div className={open===true? "mailMainToOpen" : "mailMainToClose"} >
@@ -62,20 +66,20 @@ function Mail() {
                     <div className="screen-body-item">
                         <form className="app-form" onSubmit={sendEmail}>
                             <div className="app-form-group">
-                                <input className="app-form-control p-2" placeholder="NAME" type="text" name="user_name" required autoComplete="false" />
+                                <input className="app-form-control p-2" placeholder="NAME" type="text" name="user_name" required autoComplete="false" maxLength="20"/>
                             </div>
                             <div className="app-form-group">
-                                <input className="app-form-control p-2" placeholder="EMAIL" type="email" name="user_email" onChange={(e) => validateEmail(e)} />
+                                <input className="app-form-control p-2" placeholder="EMAIL" type="email" name="user_email" onChange={(e) => validateEmail(e)} maxLength="30"/>
                                {email && <p className="text-danger">Please enter a valid email !</p>}
                             </div>
                             <div className="app-form-group">
-                                <input className="app-form-control p-2" placeholder="CONTACT NO" type="text" name="user_phone" required autoComplete="false" />
+                                <input className="app-form-control p-2" placeholder="CONTACT NO" type="text" name="user_phone" required autoComplete="false" maxLength="20"/>
                             </div>
                             <div className="app-form-group message">
-                                <textarea className="p-2 bg-blue-100" name="message" placeholder="MESSAGE" rows="6" cols="24" required autoComplete="false" />
+                                <textarea className="p-2 bg-blue-100" name="message" placeholder="MESSAGE" rows="6" cols="24" required autoComplete="false" maxLength="500"/>
                             </div>
                             <div className="app-form-group buttons">
-                                <button className="app-form-button m-1 text-warning" type="reset" onClick={()=>setEmail("")}>CANCEL</button>
+                                <button className="app-form-button m-1 text-warning" type="reset" onClick={()=>setEmail("")}>CLEAR</button>
                                 <button className="app-form-button m-1 text-success" type="submit">SEND</button>
                             </div>
                         </form>
