@@ -49,7 +49,7 @@ export default function Main() {
                 <p className="text-right text-white pr-2">< SearchIcon className="searchIcon" onClick={showModal} /></p>
             </div>
             <div className="div4 rounded-xl">
-                <h3 className="h4 text-left pl-9 pt-2">Code Samples</h3>
+                <h3 className="h4 text-left pl-9 pt-2">Code Snippets </h3>
                 <p className="text-right text-white pr-2">
                     <Link to="/codes"> < SearchIcon className="searchIcon" /></Link>
 

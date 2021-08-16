@@ -42,7 +42,7 @@ export default function Navbar() {
                             <Link to="/fetch">API Fetch</Link>
                         </div>
                         <div>
-                            <Link to="/codes">Code Samples</Link>
+                            <Link to="/codes">Code Snippets </Link>
                         </div>
                         <div>
                             <a href="https://github.com/yilmazme" target="_#">GitHub</a>
