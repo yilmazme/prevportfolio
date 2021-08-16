@@ -7,6 +7,7 @@ function Form({passQuery}){
 
     function handleSubmit(e){
         e.preventDefault();
+        //use of passQuery in Fetch.js is an examle of data to parent
         passQuery(query);
     }
 

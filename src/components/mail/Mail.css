@@ -3,7 +3,7 @@
     width: fit-content;
     height: fit-content;
     position: fixed;
-    bottom: -31rem;
+    bottom: -31.2rem;
     left: 50%;
     transform: translate(-50%,0);
     overflow: hidden;
@@ -33,12 +33,12 @@
 }
 
 @keyframes showMail {
-    from {bottom:-31rem;}
+    from {bottom:-31.2rem;}
     to {bottom:3rem;}
   }
 @keyframes hideMail {
     from {bottom: 3rem;}
-    to {bottom:-31rem;}
+    to {bottom:-31.2rem;}
   }
 
   .screen {
