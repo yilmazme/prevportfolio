@@ -208,17 +208,18 @@
   }
   
   @media screen and (max-width: 600px) {
-    .screen{
-    
-
-    }
+   
     .mailMainToOpen{
       left: 1rem;
       transform: translate(0,0);
+    z-index: 10;
+
     }
     .mailMainToClose{
       left: 1rem;
       transform: translate(0,0);
+      z-index: 10;
+
     }
   }
   
