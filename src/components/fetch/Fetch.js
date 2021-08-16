@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "./Fetch.css";
+import Form from "./Form";
 import { v4 as uuid4 } from "uuid";
 import {FaMapPin} from "react-icons/fa";
 import Picture from "./Picture";
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import SearchIcon from '@material-ui/icons/Search';
 import Fade from 'react-reveal/Fade';
 
 
@@ -17,8 +17,10 @@ export default function Fetch() {
     const [showPic, setShowPic] = useState(false);
     const [picId, setPicId] = useState(null);
     const [query, setQuery]=useState("italy")
-    const [search, setSearch]=useState(0)
+
   
+    console.log("fetch rendered")
+
     function openPic(x) {
         setShowPic(true)
         setPicId(x)
@@ -29,11 +31,6 @@ export default function Fetch() {
         console.log("load")
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        setSearch(s=>s+1)
-        console.log("searched: " + search)
-    }
 
     // these were for backend
     // const APIUrl = process.env.REACT_APP_USER_API;
@@ -53,7 +50,7 @@ export default function Fetch() {
                 console.log(err)
         })
            console.log("fetched")
-    }, [search])
+    }, [query])
 
     if (state.error !== null) {
         return <div className="warning text-center m-5 p-1">There is a problem with source or your internet connection.</div>;
@@ -64,22 +61,7 @@ export default function Fetch() {
     else {
         return (
             <div className="fetchMain">
-                <div className="introFetch">
-                   
-                    <form onSubmit={handleSubmit} className="form">
-                        <input autoFocus type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="input rounded"/>
-                        <button className="submitBtn" type="submit">
-                            <SearchIcon/>
-                        </button>
-                    </form>
-                    <br/>
-                    <h4 className="h5 my-1 px-4 ">Merhaba!</h4>
-                    <p className="px-6 text-left leading-8 font-thin">
-                    Bu sayfada arama kutucuğuna istediğiniz, tabi fotoğrafı olabilecek ifadeleri yazıp <i>Pixabay </i>
-                    sitesinden fotoğrafları siteye çekebilirsiniz. Fotoğrafı büyütüp HD kalitesinde bakabilirsiniz.
-                    Bu sayfanın temel amacı bir WEB API'sini değişen query'e göre tekrar almayı göstermektir.
-                    </p>
-                </div>              
+              <Form passQuery={q => setQuery(q)}/>            
                 <div className="cardGroup">
                     { 
                         state.photos.map((photo) => {

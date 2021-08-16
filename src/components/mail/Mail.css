@@ -181,7 +181,9 @@
     color: #e1ebe3 !important;
   }
   
-  
+  textarea {
+    resize: none;
+ }
   
   @media screen and (max-width: 520px) {
     .screen-body {
