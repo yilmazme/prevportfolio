@@ -12,6 +12,7 @@ function Mail() {
     const [open, setOpen] = useState(false)
 
 
+
     const validateEmail = (e) => {
        
         var validEmail = e.target.value
@@ -28,21 +29,32 @@ function Mail() {
     function sendEmail(e) {
         e.preventDefault();
         if (valid) {
-            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLETE_ID, e.target, process.env.REACT_APP_USER_ID)
+            try {
+                emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLETE_ID, e.target, process.env.REACT_APP_USER_ID)
                 .then((result) => {
                     console.log(result.text);
                 }, (error) => {
                     console.log(error.text);
                 });
-                setEmail('')
+              
                 setTimeout(()=>{
                     alert("Your email delivered successfully!")
                 }, 400)
+                
+            } catch (error) {
+                console.log(error)
+                setTimeout(()=>{                  
+                    alert("Sorry, we couldn't deliver your mail :(")
+                }, 1000)
+            }
         }
         else{
             setEmail("enter a valid email")
         }
        
+    }
+    function onClear(){
+        setEmail("")
     }
    
 
@@ -79,7 +91,7 @@ function Mail() {
                                 <input className="app-form-control p-2" placeholder="CONTACT NO" type="text" name="user_phone" required autoComplete="false" maxLength="20"/>
                             </div>                         
                             <div className="app-form-group buttons">
-                                <button className="app-form-button m-1 text-warning" type="reset" onClick={()=>setEmail("")}>CLEAR</button>
+                                <button className="app-form-button m-1 text-warning" type="reset" onClick={onClear}>CLEAR</button>
                                 <button className="app-form-button m-1 text-success" type="submit">SEND</button>
                             </div>
                         </form>
