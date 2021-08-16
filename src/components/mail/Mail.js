@@ -65,6 +65,9 @@ function Mail() {
                 <div className="screen-body">
                     <div className="screen-body-item">
                         <form className="app-form" onSubmit={sendEmail}>
+                            <div className="app-form-group message">
+                                <textarea className="p-2 bg-blue-100" name="message" placeholder="MESSAGE" rows="8" cols="24" required autoComplete="false" maxLength="500"/>
+                            </div>
                             <div className="app-form-group">
                                 <input className="app-form-control p-2" placeholder="NAME" type="text" name="user_name" required autoComplete="false" maxLength="20"/>
                             </div>
@@ -74,10 +77,7 @@ function Mail() {
                             </div>
                             <div className="app-form-group">
                                 <input className="app-form-control p-2" placeholder="CONTACT NO" type="text" name="user_phone" required autoComplete="false" maxLength="20"/>
-                            </div>
-                            <div className="app-form-group message">
-                                <textarea className="p-2 bg-blue-100" name="message" placeholder="MESSAGE" rows="6" cols="24" required autoComplete="false" maxLength="500"/>
-                            </div>
+                            </div>                         
                             <div className="app-form-group buttons">
                                 <button className="app-form-button m-1 text-warning" type="reset" onClick={()=>setEmail("")}>CLEAR</button>
                                 <button className="app-form-button m-1 text-success" type="submit">SEND</button>

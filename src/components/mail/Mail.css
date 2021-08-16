@@ -3,7 +3,7 @@
     width: fit-content;
     height: fit-content;
     position: fixed;
-    bottom: -29rem;
+    bottom: -31rem;
     left: 50%;
     transform: translate(-50%,0);
     overflow: hidden;
@@ -33,12 +33,12 @@
 }
 
 @keyframes showMail {
-    from {bottom:-29rem;}
+    from {bottom:-31rem;}
     to {bottom:3rem;}
   }
 @keyframes hideMail {
     from {bottom: 3rem;}
-    to {bottom:-29rem;}
+    to {bottom:-31rem;}
   }
 
   .screen {
@@ -136,7 +136,7 @@
   }
   
   .app-form-group.message {
-    margin-top: 40px;
+    margin-top: 10px;
   }
   
   .app-form-group.buttons {
