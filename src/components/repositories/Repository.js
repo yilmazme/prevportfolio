@@ -14,11 +14,13 @@ import Pulse from 'react-reveal/Pulse';
 export default function Repository(){
 
 const [pictures, setPictures] = useState([])
+const [banner, setBanner] = useState("")
 
 useEffect(()=>{
 
 setTimeout(()=>{
     setPictures([panteo, aile, blog, drag, puzzle, wincar, balls])
+    setBanner("Runs on free dyno, first loading will be slow")
 },2500)
 
 },[])
@@ -36,11 +38,13 @@ setTimeout(()=>{
                 </a>
             </div>
             <div className="cell">
+                <p>{banner}</p>
                 <a href="https://ailebul.herokuapp.com/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={aile} alt="aile" />}
                 </a>
             </div>
             <div className="cell">
+            <p>{banner}</p>
                 <a href="https://yilmazblog.herokuapp.com/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={blog} alt="blog" />}
                 </a>
@@ -72,7 +76,7 @@ setTimeout(()=>{
             </div>
             <div className="cell text-white py-10">
                 <i className="fas fa-tools"></i>
-                <p className="my-2">Something under construction !</p>
+                <h4 className="my-2">Something under construction !</h4>
             </div>
             </Pulse>
         </div>
