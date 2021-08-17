@@ -1,10 +1,15 @@
-import { useState} from "react";
+import { useState, useRef, useEffect} from "react";
 import SearchIcon from '@material-ui/icons/Search';
 
 function Form({passQuery}){
 
     const [query, setQuery]=useState("italy")
 
+    const inputRef = useRef();
+        useEffect(()=>{
+            inputRef.current.focus();
+        },[])
+  
     function handleSubmit(e){
         e.preventDefault();
         //use of passQuery in Fetch.js is an examle of data to parent
@@ -15,7 +20,7 @@ return(
     <div className="introFetch">
 
         <form onSubmit={handleSubmit} className="form">
-            <input autoFocus type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="input rounded" />
+            <input ref={inputRef} type="text" value={query} onChange={(e) => setQuery(e.target.value)} className="input rounded" />
             <button className="submitBtn" type="submit">
                 <SearchIcon />
             </button>

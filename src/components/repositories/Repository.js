@@ -20,7 +20,7 @@ useEffect(()=>{
 
 setTimeout(()=>{
     setPictures([panteo, aile, blog, drag, puzzle, wincar, balls])
-    setBanner("Runs on free dyno, first loading will be slow")
+    setBanner("Runs on free dyno, initial loading will be slow")
 },2500)
 
 },[])
@@ -76,7 +76,7 @@ setTimeout(()=>{
             </div>
             <div className="cell text-white py-10">
                 <i className="fas fa-tools"></i>
-                <h4 className="my-2">Something under construction !</h4>
+                <h3 className="my-2">Something under construction !</h3>
             </div>
             </Pulse>
         </div>
