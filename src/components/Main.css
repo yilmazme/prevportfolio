@@ -26,7 +26,7 @@
     column-gap: 1rem;
     animation: seen 1s ease-in 1s forwards;
     box-shadow: rgb(204, 202, 202) 3px 0 3px 3px;
-    z-index: 2;
+    z-index: 6;
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -40,6 +40,7 @@
   opacity: 0;
   animation: seen 1s ease-in 1.3s forwards;
   background-color: #E74C3C ;
+  z-index: 5;
 }
 .div3{
   position: absolute;
@@ -51,6 +52,7 @@
   opacity: 0;
   animation: seen 1s ease-in 1.6s forwards;
   background-color: #2980B9  ;
+  z-index: 4;
 }
 
 .div4{
@@ -63,6 +65,7 @@
   opacity: 0;
   animation: seen 1s ease-in 1.9s forwards;
   background-color: #28B463 ;
+  z-index: 3;
 }
 .div5{
   position: absolute;
@@ -74,6 +77,7 @@
   opacity: 0;
   animation: seen 1s ease-in 2.2s forwards;
   background-color: #F1C40F ;
+  z-index: 2;
 }
 .searchIcon{
   position: absolute;
@@ -122,21 +126,29 @@
   color: rgb(236, 111, 53);
   z-index: 1;
 }
-.caurosolDiv{
+.carouselDiv{
   background-color: #333;
   position: absolute;
-  top: 3.1rem;
-  right: 1rem;
+  top: 3.2rem;
+  left: 13rem;
+  z-index: 1;
   width: 40vw;
   height: 50vh;
   box-shadow: 10px 10px 10px 0px rgb(117, 116, 116);
   border-radius: 2%;
+  animation: caurosel 1s ease-in 3s forwards;
+  opacity: 0;
 }
 
 
-.caurosolDiv div{
+
+.carouselDiv div{
  height: 50vh;
  padding: 5px;
+}
+@keyframes caurosel {
+  from {left: 13rem; opacity: 0;}
+  to {left:59vw; opacity: 1;}
 }
 
 
@@ -145,7 +157,7 @@
   padding-top: 0rem;
 
   }
-  .caurosolDiv{
+  .carouselDiv{
    display: none;
   }
  .div1{

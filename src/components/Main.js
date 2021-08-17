@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./Main.css"
-import {FaMapPin} from "react-icons/fa";
+import { FaMapPin } from "react-icons/fa";
 import mypic from "../pictures/mypic.jpg"
 import Contact from "./contact/Contact";
 import Backdrop from "./contact/Backdrop";
 import SearchIcon from '@material-ui/icons/Search';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Carous from "./carousel/Carousel";
 
 export default function Main() {
@@ -20,7 +20,7 @@ export default function Main() {
     }
 
     return (
-      
+
         <div className="mainMain">
             <div className="div1 text-center rounded-xl bg-white">
                 <div className="myIntro">
@@ -45,8 +45,11 @@ export default function Main() {
             </div>
 
             <div className="div5 rounded-xl">
-                <h3 className="h4 text-left pl-9 pt-2">Contact</h3>
-                <p className="text-right text-white pr-2">< SearchIcon className="searchIcon" onClick={showModal} /></p>
+                <h3 className="h4 text-left pl-9 pt-2">Works</h3>
+                <p className="text-right text-white pr-2">
+                    <Link to="/repos">< SearchIcon className="searchIcon" /></Link>
+                </p>
+
             </div>
             <div className="div4 rounded-xl">
                 <h3 className="h4 text-left pl-9 pt-2">Code Snippets </h3>
@@ -63,13 +66,15 @@ export default function Main() {
                 </p>
             </div>
             <div className="div2 rounded-xl">
-                <h3 className="h4 text-left pl-9 pt-2">Works</h3>
-                <p className="text-right text-white pr-2">
-                    <Link to="/repos">< SearchIcon className="searchIcon" /></Link>
-                </p>
+                <h3 className="h4 text-left pl-9 pt-2">Contact</h3>
+                <p className="text-right text-white pr-2">< SearchIcon className="searchIcon" onClick={showModal} /></p>
+
             </div>
-            <Carous/>
-    
+            <div className="carouselDiv">
+                <Carous />
+            </div>
+
+
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
         </div>

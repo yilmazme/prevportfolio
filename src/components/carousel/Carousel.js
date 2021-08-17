@@ -13,7 +13,7 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Carous(){
 
     return (
-        <div className="caurosolDiv">
+        
             <Carousel autoPlay showThumbs={false} dynamicHeight={false} infiniteLoop={true}>
                 <div>
                     <img src={aile} alt="aile"/>
@@ -71,7 +71,6 @@ export default function Carous(){
                 </div>
             </Carousel>
 
-        </div>
 
     )
 }
