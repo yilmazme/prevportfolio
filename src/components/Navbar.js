@@ -48,7 +48,7 @@ export default function Navbar() {
                             <a href="https://github.com/yilmazme" target="_#">GitHub</a>
                         </div>
                         <div onClick={showModal} className="contactBtn">
-                          <a href="#"> Contact</a>
+                          <button>Contact</button>
                         </div>
                         <div>
                             <a href="https://my-old-portfolio.netlify.app/" target="_#">Old Site</a>

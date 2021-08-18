@@ -1,3 +1,4 @@
+import React from 'react';
 import './Mail.css';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
@@ -11,7 +12,7 @@ function Mail() {
     const [email, setEmail] = useState("")
     const [open, setOpen] = useState(false)
 
-
+console.log("mail rendered")
 
     const validateEmail = (e) => {
        
@@ -106,4 +107,4 @@ function Mail() {
     );
 }
 
-export default Mail;
+export default React.memo(Mail);

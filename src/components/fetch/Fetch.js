@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Fetch.css";
 import Form from "./Form";
 import { v4 as uuid4 } from "uuid";
@@ -9,7 +9,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import Fade from 'react-reveal/Fade';
 
 
-export default function Fetch() {
+ function Fetch() {
 
     const [state, setState] = useState({ photos: [], load: false, error:null });
 
@@ -45,18 +45,17 @@ export default function Fetch() {
     useEffect(() => {
         fetch(URL)
             .then((response) => response.json())
-            .then((data) => setState({...state, photos: data.hits, load: true }))
-            .catch((err)=>{setState({...state, load:true, error:err})
+            .then((data) => setState({ photos: data.hits, load: true, error:null }))
+            .catch((err)=>{setState({photos:[], load:true, error:err})
                 console.log(err)
         })
-           console.log("fetched")
-    }, [query])
+    }, [query, URL])
 
     if (state.error !== null) {
-        return <div className="warning text-center m-5 p-1">There is a problem with source or your internet connection.</div>;
+        return <div className="warning text-center mt-5 p-1 bg-warning ">There is a problem with source or your internet connection.</div>;
     }
     else if (!state.load) {
-        return <div className="text-center m-5">Loading...</div>
+        return <div className="text-center mt-5 bg-success p-1 text-light">Loading...</div>
     }
     else {
         return (
@@ -89,3 +88,5 @@ export default function Fetch() {
     }
 
 }
+
+export default React.memo(Fetch);

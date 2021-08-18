@@ -18,17 +18,17 @@ nav {
     z-index: 10 ;
   }
   
-  .navLinks a {
+  .navLinks a, .contactBtn {
     color: white;
     text-decoration: none; 
     border-bottom: solid 2px #333; 
   }
-  nav a:hover {
+  nav a:hover, .contactBtn:hover {
     color: cadetblue;
     border-bottom:solid 2px wheat;
   }
 
-  .navLinks a::before {
+  .navLinks a::before,.contactBtn::before {
     content: ">>";
     color: rgb(241, 26, 213);
   }

@@ -26,11 +26,12 @@ return(
             </button>
         </form>
         <br />
-        <h4 className="h5 my-1 px-4 ">Merhaba!</h4>
+        <h4 className="h5 my-1 px-4 ">Hola!</h4>
         <p className="px-6 text-left leading-8 font-thin">
-            Bu sayfada arama kutucuğuna istediğiniz, tabi fotoğrafı olabilecek ifadeleri yazıp <i>Pixabay </i>
-            sitesinden fotoğrafları siteye çekebilirsiniz. Fotoğrafı büyütüp HD kalitesinde bakabilirsiniz.
-            Bu sayfanın temel amacı bir WEB API'sini değişen query'e göre tekrar almayı göstermektir.
+            On this page you can see a sample API fetching with a little bit more features.
+            You can search any photos on <i>Pixabay's web site </i> by just typing your query and our API call will dynamically change.
+            You can take a look at photos with full size and HD quality.
+        
         </p>
     </div>
 )
