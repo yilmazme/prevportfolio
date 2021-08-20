@@ -1,3 +1,6 @@
+.zindex{
+  z-index: 123;
+}
 .navContainer{
   box-sizing: border-box;
   padding: 0px;
@@ -24,8 +27,8 @@ nav {
     border-bottom: solid 2px #333; 
   }
   nav a:hover, .contactBtn:hover {
-    color: cadetblue;
-    border-bottom:solid 2px wheat;
+   
+    border-bottom:solid 2px #ffc107;
   }
 
   .navLinks a::before,.contactBtn::before {
@@ -33,12 +36,10 @@ nav {
     color: rgb(241, 26, 213);
   }
   
-  nav a:active {
-    border-bottom:solid 2px rgb(165, 23, 23);
+  nav a:active, .contactBtn:active{
+    border-bottom:solid 2px #28a745;
   }
-  .contactBtn:active{
-    border-bottom:solid 2px rgb(165, 23, 23);
-  }
+
   .navLinks {
     display: flex;
     justify-content: space-evenly;

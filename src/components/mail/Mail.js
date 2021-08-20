@@ -91,7 +91,7 @@ const myPhone = useRef();
                     <div className="screen-body-item">
                         <form className="app-form" onSubmit={sendEmail}>
                             <div className="app-form-group message">
-                                <textarea ref={myText} className="p-2 bg-blue-100" name="message" placeholder="MESSAGE" rows="8" cols="24" required autoComplete="false" maxLength="500"/>
+                                <textarea ref={myText} className="p-2" name="message" placeholder="MESSAGE" rows="8" cols="24" required autoComplete="false" maxLength="500"/>
                             </div>
                             <div className="app-form-group">
                                 <input ref={myName} className="app-form-control p-2" placeholder="NAME" type="text" name="user_name" required autoComplete="false" maxLength="20"/>

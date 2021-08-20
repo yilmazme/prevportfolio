@@ -18,7 +18,7 @@ export default function Code(){
                         as={ButtonGroup}                        
                         id={`dropdown-button-drop-end`}
                         drop="end"
-                        variant="info"
+                        variant="success"
                         title="Languages"
                         className="my-3"
                     >
@@ -34,7 +34,7 @@ export default function Code(){
                         as={ButtonGroup}                        
                         id={`dropdown-button-drop-end`}
                         drop="end"
-                        variant="info"
+                        variant="warning"
                         title="Frameworks"
                         className="my-3"
                     >

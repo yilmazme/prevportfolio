@@ -1,7 +1,8 @@
 .contactModal {
+  font-family: cursive;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    background-image:linear-gradient(to right, rgb(234, 236, 215), rgb(223, 245, 239) );
+    background-image:linear-gradient(to right, rgb(234, 240, 182), rgb(107, 204, 178) );
     padding: 1rem;
     padding-top: 1rem;
     text-align: left;
