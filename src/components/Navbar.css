@@ -21,22 +21,22 @@ nav {
     z-index: 10 ;
   }
   
-  .navLinks a, .contactBtn {
+  .navLinks a, .contactBtn, .drawerBtn {
     color: white;
     text-decoration: none; 
     border-bottom: solid 2px #333; 
   }
-  nav a:hover, .contactBtn:hover {
+  nav a:hover, .contactBtn:hover, .drawerBtn:hover {
    
     border-bottom:solid 2px #ffc107;
   }
 
-  .navLinks a::before,.contactBtn::before {
+  .navLinks a::before,.contactBtn::before,.drawerBtn::before {
     content: ">>";
     color: rgb(241, 26, 213);
   }
   
-  nav a:active, .contactBtn:active{
+  nav a:active, .contactBtn:active, .drawerBtn:active{
     border-bottom:solid 2px #28a745;
   }
 
@@ -60,6 +60,7 @@ nav {
 .FaHome :hover{
     color: cadetblue;
 }
+
 
 @media (max-width:1035px) {
  
@@ -95,13 +96,9 @@ nav {
        text-align: center;
        margin-left: 1.4rem;
     }
-    .navLinks a::before {
+    .navLinks a::before, .contactBtn::before, .drawerBtn::before {
       content: unset;
   
-    }
-    .contactBtn::before{
-      content: unset;
- 
     }
     .homeIcon{
       margin-left: 1.8rem;

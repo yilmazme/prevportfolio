@@ -2,21 +2,17 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import LanguageIcon from '@material-ui/icons/Language';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles({
   list: {
     width: 250,
-  },
-  fullList: {
-    width: 'auto',
+    backgroundColor:"cadetblue",
+    marginTop:"30%"
   },
 });
 
@@ -47,35 +43,30 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+          <ListItem>
+            <ListItemIcon> <GitHubIcon/></ListItemIcon>
+            <a href="https://github.com/yilmazme" target="_#">Go to GitHub</a>
           </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+          <br/>
+          <ListItem>
+            <ListItemIcon> <LanguageIcon /></ListItemIcon>
+            <a href="https://my-old-portfolio.netlify.app/" target="_#">Go to Old Site</a>
           </ListItem>
-        ))}
       </List>
     </div>
   );
 
   return (
-    <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
+    
+     <div className="drawerBtn">
+         <button onClick={toggleDrawer("right", true)}>More</button>
+          <Drawer anchor="right" open={state["right"]} onClose={toggleDrawer("right", false)}>
+            {list("right")}
           </Drawer>
-        </React.Fragment>
-      ))}
-    </div>
+     </div>
+        
+         
+        
+  
   );
 }

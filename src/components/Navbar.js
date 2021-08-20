@@ -45,18 +45,12 @@ export default function Navbar() {
                         <div>
                             <Link to="/codes">Code Snippets </Link>
                         </div>
-                        <div>
-                            <a href="https://github.com/yilmazme" target="_#">GitHub</a>
-                        </div>
+                      
                         <div onClick={showModal} className="contactBtn">
                           <button>Contact</button>
                         </div>
-                        <div>
-                            <a href="https://my-old-portfolio.netlify.app/" target="_#">Old Site</a>
-                        </div>
-                        <div className="zindex">
-                            {/* <TemporaryDrawer/> */}
-                        </div>
+                      
+                        <TemporaryDrawer/>                   
                     </div>
 
                 </nav>
