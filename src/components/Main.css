@@ -41,6 +41,8 @@
   animation: seen 500ms ease-in 700ms forwards;
   background-color: rgb(250, 28, 28) ;
   z-index: 5;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .div3{
   position: absolute;
@@ -52,6 +54,8 @@
   animation: seen 500ms ease-in 900ms forwards;
   background-color: rgb(144, 19, 247)  ;
   z-index: 4;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .div4{
@@ -64,6 +68,8 @@
   animation: seen 500ms ease-in 1100ms forwards;
   background-color: #0bda15 ;
   z-index: 3;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .div5{
   position: absolute;
@@ -75,6 +81,8 @@
   animation: seen 500ms ease-in 1300ms forwards;
   background-color: #1b75fd ;
   z-index: 2;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 .searchIcon{
   position: absolute;
@@ -141,6 +149,7 @@
  height: 50vh;
  padding: 5px;
 }
+
 @keyframes caurosel {
   from {left: 13rem; opacity: 0;}
   to {left:59vw; opacity: 1;}

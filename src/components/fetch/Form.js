@@ -26,7 +26,7 @@ return(
             </button>
         </form>
         <br />
-        <h4 className="h5 my-1 px-4 ">Hola!</h4>
+        <h4 className="h5 my-1 px-4 ">Ciao!</h4>
         <p className="px-6 text-left leading-8 font-thin">
             On this page you can see a sample API fetching with a little bit more features.
             You can search any photos on <i>Pixabay's web site </i> by just typing your query and our API call will dynamically change.

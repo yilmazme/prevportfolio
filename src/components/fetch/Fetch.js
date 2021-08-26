@@ -68,7 +68,7 @@ import Fade from 'react-reveal/Fade';
                                 return  <div className="text-center m-2">No Photos Found...</div>
                             }
                             return (
-                                <Fade key={uuid4()}>
+                                <Fade delay={200} key={uuid4()}>
                                     <div  className="userCard">
                                     <FullscreenIcon className="FullscreenIcon" onClick={()=>openPic(photo.id)}/>
                                     <FaMapPin className="FaMapPin" />

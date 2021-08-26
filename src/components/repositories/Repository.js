@@ -9,6 +9,7 @@ import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
 import search  from "../../pictures/search.PNG"
 import evre from "../../pictures/evre.PNG"
+import Aile from "../../pictures/aile.mp4";
 import Pulse from 'react-reveal/Pulse';
 
 export default function Repository(){
@@ -24,9 +25,21 @@ setTimeout(()=>{
 },2500)
 
 },[])
+
+
+const Video =  <video width="100%" height="240" autoPlay loop muted id="myVideo">
+        <source src={Aile} type="video/mp4"/>
+</video>
+
     return (
         <div className="repoMain text-center align-center">
-            <Pulse>
+            <Pulse delay={250}>
+            <div className="cell"> 
+                <a href="https://ailebul.herokuapp.com/" target="_blank" rel="noreferrer">
+                <p>{banner}</p>
+                    {pictures.length === 0 ? null : Video}
+                </a>
+            </div>
             <div className="cell">
                 <a href="https://my-search.netlify.app/" target="_blank" rel="noreferrer">
                     {pictures.length === 0 ? null : <img src={search} alt="search" />}
@@ -38,14 +51,9 @@ setTimeout(()=>{
                 </a>
             </div>
             <div className="cell">
-                <p>{banner}</p>
-                <a href="https://ailebul.herokuapp.com/" target="_blank" rel="noreferrer">
-                    {pictures.length === 0 ? null : <img src={aile} alt="aile" />}
-                </a>
-            </div>
-            <div className="cell">
-            <p>{banner}</p>
+            
                 <a href="https://yilmazblog.herokuapp.com/" target="_blank" rel="noreferrer">
+                <p>{banner}</p>
                     {pictures.length === 0 ? null : <img src={blog} alt="blog" />}
                 </a>
             </div>

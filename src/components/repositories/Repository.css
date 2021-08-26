@@ -14,13 +14,16 @@
     animation-timing-function: ease-in;
    
 }
+video {
+    margin-top: auto !important;
+  }
 .cell{
     position: relative;
-    min-width: 40vw;
+    width: 40vw;
     height: 40vh;
     background-color: black;
-    box-shadow: black 5px 5px 5px
-
+    box-shadow: black 5px 5px 5px;
+    overflow: hidden; 
 }
 .cell p{
     background-color:red;
@@ -29,7 +32,6 @@
     right: 1rem;
     top: 0.4rem;
     font-size: small;
-    opacity: 1;
     padding: 2px;
 }
 
@@ -71,5 +73,8 @@
     img{
         width: 78vw;
         padding-right: 4px;
+    }
+    video{
+        padding-top: 3rem;
     }
   }
