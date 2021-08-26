@@ -9,7 +9,7 @@ import wincar  from "../../pictures/wincar.PNG"
 import balls  from "../../pictures/balls.PNG"
 import search  from "../../pictures/search.PNG"
 import evre from "../../pictures/evre.PNG"
-import Aile from "../../pictures/aile.mp4";
+import Aile from "../../pictures/aileTrim.mp4";
 import Pulse from 'react-reveal/Pulse';
 
 export default function Repository(){
@@ -27,7 +27,7 @@ setTimeout(()=>{
 },[])
 
 
-const Video =  <video width="100%" height="240" autoPlay loop muted id="myVideo">
+const Video =  <video width="96%" height="100%" autoPlay loop muted id="myVideo">
         <source src={Aile} type="video/mp4"/>
 </video>
 

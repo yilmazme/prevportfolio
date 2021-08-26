@@ -15,7 +15,7 @@
    
 }
 video {
-    margin-top: auto !important;
+    margin:auto;
   }
 .cell{
     position: relative;
