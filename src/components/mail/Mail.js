@@ -81,7 +81,7 @@ const myPhone = useRef();
                         <div className="screen-header-button minimize"></div>
                     </div>
                     <div className="screen-header-center text-center">
-                        <h3 className="text-center text-info">{open===true? "Nah, maybe later" : "Text to me"}</h3>
+                        <h3 className="text-center text-info">{open===true? "No, maybe later" : "Text to me"}</h3>
                     </div>
                     <div className="screen-header-right" onClick={()=>setOpen(!open)}>
                     {open===true? <ArrowDropDownIcon className="text-danger fs-2"/> : <ArrowDropUpIcon className="text-success fs-2"/>}

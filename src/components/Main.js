@@ -22,10 +22,10 @@ export default function Main() {
     return (
 
         <div className="mainMain">
-            <div className="div1 text-center rounded-xl bg-white">
+            <div className="div1 text-center rounded-xl">
                 <div className="myIntro">
                     <h1 className="h3 text-left px-7">Welcome!</h1>
-                    <p className="px-6 text-left leading-8 ">
+                    <p className="px-6 text-left leading-5">
                         The goal of this website is to introduce myself and share some experiences with people.
                         <br />
                         I am a software developer with a few years of experience in front and back ends. Currently,
@@ -39,8 +39,8 @@ export default function Main() {
                 <div className="myCard" onClick={showModal}>
                     <FaMapPin className="MainfaMapPin" />
                     <img src={mypic} alt="mypic" />
-                    <h5 className="font-bold">Mehmet Yılmaz</h5>
-                    <p><em>Yeah, this is me.</em></p>
+                    <h5>Mehmet Yılmaz</h5>
+                    <p><em>Yes, this is me.</em></p>
                 </div>
             </div>
 
