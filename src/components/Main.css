@@ -71,7 +71,6 @@
   left: 13rem;
   width: 40vw;
   height: 50vh;
-  box-shadow: 10px 10px 10px 0px rgb(117, 116, 116);
   opacity: 0;
   animation: seen 500ms ease-in 1300ms forwards;
   background-color: #1b75fd ;
@@ -132,7 +131,7 @@
   left: 13rem;
   z-index: 1;
   width: 40vw;
-  height: 50vh;
+  height: 49vh;
   box-shadow: 10px 10px 10px 0px rgb(117, 116, 116);
   animation: caurosel 1s ease-in 1700ms forwards;
   opacity: 0;

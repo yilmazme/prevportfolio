@@ -34,10 +34,10 @@
 
 @keyframes showMail {
     from {bottom:-31.2rem;}
-    to {bottom:3rem;}
+    to {bottom:2rem;}
   }
 @keyframes hideMail {
-    from {bottom: 3rem;}
+    from {bottom: 2rem;}
     to {bottom:-31.2rem;}
   }
 

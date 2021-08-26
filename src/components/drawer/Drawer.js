@@ -11,8 +11,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 const useStyles = makeStyles({
   list: {
     width: 250,
-    backgroundColor:"cadetblue",
-    marginTop:"30%"
+    backgroundColor:"rgb(144, 19, 247) ",
+    marginTop:"30%",
+    color:"white",
   },
 });
 
@@ -44,12 +45,12 @@ export default function TemporaryDrawer() {
     >
       <List>
           <ListItem>
-            <ListItemIcon> <GitHubIcon/></ListItemIcon>
+            <ListItemIcon> <GitHubIcon className="text-warning"/></ListItemIcon>
             <a href="https://github.com/yilmazme" target="_#">Go to GitHub</a>
           </ListItem>
           <br/>
           <ListItem>
-            <ListItemIcon> <LanguageIcon /></ListItemIcon>
+            <ListItemIcon> <LanguageIcon className="text-warning"/></ListItemIcon>
             <a href="https://my-old-portfolio.netlify.app/" target="_#">Go to Old Site</a>
           </ListItem>
       </List>
