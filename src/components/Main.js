@@ -36,9 +36,9 @@ export default function Main() {
                         Well,it is not because I am lazy, it is because there will always be new things to learn and add to the site <>	&#128522;</>.
                     </p>
                 </div>
-                <div className="myCard" onClick={showModal}>
+                <div className="myCard">
                     <FaMapPin className="MainfaMapPin" />
-                    <img src={mypic} alt="mypic" />
+                    <img src={mypic} alt="mypic"  onClick={showModal}/>
                     <h5>Mehmet Yılmaz</h5>
                     <p><em>Yes, this is me.</em></p>
                 </div>
