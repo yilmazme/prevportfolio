@@ -85,6 +85,20 @@
   border-left: 1px solid black;
   border-bottom: 1px solid black;
 }
+.videoDiv{
+  background-color: #333;
+  padding-top: 2px;
+  position: absolute;
+  top: 3.2rem;
+  right: 1rem;
+  width: 40vw;
+  height: 50vh;
+  opacity: 1;
+  z-index: 12;
+  border: 1px solid black;
+  animation: seen 500ms ease-in 0ms forwards;
+}
+
 .searchIcon{
   position: absolute;
   top: 0.5rem;
@@ -219,7 +233,7 @@
   padding-top: 0rem;
 
   }
-  .workDiv, .codeDiv, .apiDiv, .contactDiv{
+  .workDiv, .codeDiv, .apiDiv, .contactDiv, .videoDiv{
    display: none;
   }
  .div1{

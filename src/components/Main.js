@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Main.css"
+import Aile from "../pictures/aileTrim.mp4";
 import { FaMapPin } from "react-icons/fa";
 import mypic from "../pictures/mypic.jpg"
 import Contact from "./contact/Contact";
@@ -8,11 +9,22 @@ import { Link } from 'react-router-dom';
 import Carous from "./carousel/Carousel";
 import DraftsIcon from '@material-ui/icons/Drafts';
 import MarkunreadIcon from '@material-ui/icons/Markunread';
+import Tool from "./tooltip/Tooltip.js"
 
 export default function Main() {
 
     const [show, setShow] = useState(false);
-    const [state, setState] = useState({ work: true, code: false, api: false, contact: false })
+    const [state, setState] = useState({ work: true, code: false, api: false, contact: false, flag: false })
+
+  
+    useEffect(()=>{
+        var time = setTimeout(()=>{
+            if(!state.work&&!state.code&&!state.api&&!state.contact){
+            setState({...state, flag:true})}
+         },2000)
+       
+       return ()=>{clearTimeout(time)};
+    },[state.work, state.code, state.api, state.contact])
 
     function showModal() {
         setShow(true)
@@ -20,7 +32,7 @@ export default function Main() {
     function closeModal() {
         setShow(false)
     }
-
+console.log("main rendered")
     return (
 
         <div className="mainMain">
@@ -48,7 +60,7 @@ export default function Main() {
 
             <div className="div5 ">
                 <h3 className="h4 text-left pl-9 pt-2">Works</h3>
-                {state.work?
+                {state.work ?
                     < DraftsIcon className="searchIcon" onClick={() => setState({ work: !state.work, code: false, api: false, contact: false })} />
                     :
                     < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: !state.work, code: false, api: false, contact: false })} />
@@ -58,33 +70,33 @@ export default function Main() {
             <div className="div4 ">
                 <h3 className="h4 text-left pl-9 pt-2">Code Snippets </h3>
                 <p className="text-right text-white pr-2">
-                    {state.code?
-                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
-                    :
-                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
-                }
-                    
+                    {state.code ?
+                        < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
+                        :
+                        < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
+                    }
+
                 </p>
             </div>
             <div className="div3 ">
                 <h3 className="h4 text-left pl-9 pt-2">API Fetch Example</h3>
 
                 <p className="text-right text-white pr-2">
-                {state.api?
-                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
-                    :
-                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
-                }
+                    {state.api ?
+                        < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
+                        :
+                        < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
+                    }
                 </p>
             </div>
             <div className="div2 ">
                 <h3 className="h4 text-left pl-9 pt-2">Contact</h3>
                 <p className="text-right text-white pr-2">
-                {state.contact?
-                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact:!state.contact })} />
-                    :
-                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact: !state.contact })} />
-                }
+                    {state.contact ?
+                        < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact: !state.contact })} />
+                        :
+                        < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact: !state.contact })} />
+                    }
                 </p>
 
             </div>
@@ -111,17 +123,27 @@ export default function Main() {
             </div>
             <div className={state.contact ? "contactDiv showAnimeClass" : "contactDiv hideAnimeClass"}>
                 <div className="text-center">
-                <div className="my-7">
-                    <h4>
-                        Mehmet Yılmaz
-                    </h4>
-                    <p><em>Software Developer</em></p>
-                    <h5>Phone: +90 538 476 1082</h5>
-                    <h5>E-mail: 10myilmaz@gmail.com</h5>
-                </div>
+                    <div className="my-7">
+                        <h4>
+                            Mehmet Yılmaz
+                        </h4>
+                        <p><em>Software Developer</em></p>
+                        <h5>Phone: +90 538 476 1082</h5>
+                        <h5>E-mail: 10myilmaz@gmail.com</h5>
+                    </div>
                 </div>
             </div>
+            {!state.work && !state.code && !state.api && !state.contact && state.flag &&
 
+                <div className="videoDiv text-center">
+                    <video width="96%" height="auto" autoPlay loop muted id="newVideo">
+                        <source src={Aile} type="video/mp4" />
+                    </video>
+                    <div className="pt-3 mt-3">
+                            <Tool className="pt-3 mt-3"/>
+                    </div>
+                </div> 
+            }
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
         </div>
