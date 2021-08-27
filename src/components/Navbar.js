@@ -8,6 +8,7 @@ import Main from "./Main";
 import Fetch from "./fetch/Fetch";
 import Repository from "./repositories/Repository";
 import Code from "./codes/Code";
+import Default from "./Default";
 import TemporaryDrawer from "./drawer/Drawer"
 
 
@@ -71,6 +72,10 @@ export default function Navbar() {
                     <Route path="/fetch">
                         <Fetch/>
                     </Route>
+                    <Route path='*'>
+                        <Default/>
+                    </Route>
+
                 </div>
             </Router>
             {show && <Backdrop onClick={closeModal} />}
