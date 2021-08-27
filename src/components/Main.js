@@ -80,7 +80,7 @@ export default function Main() {
                     <h3 className="my-2">Something under construction !</h3>
                 </div>
                 <div className="text-center">
-                    <Link to="/codes">Go To Page</Link>
+                    <Link to="/codes">Go To The Page</Link>
                 </div>
             </div>
             <div className={state.api ? "apiDiv showAnimeClass" : "apiDiv hideAnimeClass"}>
@@ -89,7 +89,7 @@ export default function Main() {
                     <h3 className="my-2">Something under construction !</h3>
                 </div>
                 <div className="text-center">
-                    <Link to="/fetch">Go To Page</Link>
+                    <Link to="/fetch">Go To The Page</Link>
                 </div>
             </div>
             <div className={state.contact ? "contactDiv showAnimeClass" : "contactDiv hideAnimeClass"}>
