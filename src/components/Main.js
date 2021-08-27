@@ -139,8 +139,8 @@ console.log("main rendered")
                     <video width="96%" height="auto" autoPlay loop muted id="newVideo">
                         <source src={Aile} type="video/mp4" />
                     </video>
-                    <div className="pt-3 mt-3">
-                            <Tool className="pt-3 mt-3"/>
+                    <div className="pt-2 text-warning">
+                            <Tool/>
                     </div>
                 </div> 
             }
