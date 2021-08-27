@@ -151,6 +151,7 @@
 }
 .workDiv{
   background-color: rgb(247, 180, 99);
+  padding: 0rem 1rem 0rem;
   position: absolute;
   top: 3.2rem;
   left: 14rem;
