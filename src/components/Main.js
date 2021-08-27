@@ -47,7 +47,7 @@ console.log("main rendered")
                         <br />
                         Here on this site, you can find some of my works, experiences, and mistakes.
                         The site is not complete and it won't be any time soon.
-                        Well,it is not because I am lazy, it is because there will always be new things to learn and add to the site <>	&#128522;</>.
+                        Well,it is not because I am lazy, it is because there will always be new things to learn and share <>	&#128522;</>.
                     </p>
                 </div>
                 <div className="myCard">
