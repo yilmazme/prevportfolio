@@ -3,7 +3,7 @@
     width: fit-content;
     height: fit-content;
     position: fixed;
-    bottom: -31.2rem;
+    bottom: -30rem;
     right: 1rem;
     overflow: hidden;
     z-index: 13;
@@ -37,12 +37,12 @@
 }
 
 @keyframes showMail {
-    from {bottom:-31.2rem;}
+    from {bottom:-30rem;}
     to {bottom:2rem;}
   }
 @keyframes hideMail {
     from {bottom: 2rem;}
-    to {bottom:-31.2rem;}
+    to {bottom:-30rem;}
   }
 
   .screen {
