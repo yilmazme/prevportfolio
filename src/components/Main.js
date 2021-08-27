@@ -38,8 +38,8 @@ console.log("main rendered")
         <div className="mainMain">
             <div className="div1 text-center">
                 <div className="myIntro">
-                    <h1 className="h3 text-left px-7">Welcome!</h1>
-                    <p className="px-6 text-left leading-5">
+                    <h1 className="h3 text-left px-6">Welcome!</h1>
+                    <p className="px-4 py-0 text-left leading-5">
                         The goal of this website is to introduce myself and share some experiences with people.
                         <br />
                         I am a software developer with a few years of experience in both backend and frontend. Currently,
