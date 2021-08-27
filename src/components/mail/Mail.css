@@ -4,7 +4,7 @@
     height: fit-content;
     position: fixed;
     bottom: -31.2rem;
-    right: 0px;
+    right: 1rem;
     overflow: hidden;
     z-index: 13;
     animation-name: showMail;
@@ -12,7 +12,7 @@
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    opacity: 1;
+
 
 }
 .mailMainToClose{
@@ -20,7 +20,7 @@
     height: fit-content;
     position: fixed;
     bottom: 3rem;
-    right: 0px;
+    right: 1rem;
     overflow: hidden;
     z-index: 13; 
     animation-name: hideMail;
@@ -28,7 +28,7 @@
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    opacity: 0.5;
+   
 
 }
 
@@ -38,17 +38,18 @@
 
 @keyframes showMail {
     from {bottom:-31.2rem;}
-    to {bottom:2rem; opacity: 1;}
+    to {bottom:2rem;}
   }
 @keyframes hideMail {
-    from {bottom: 2rem; opacity: 1;}
-    to {bottom:-31.2rem; opacity: 0.5;}
+    from {bottom: 2rem;}
+    to {bottom:-31.2rem;}
   }
 
   .screen {
     position: relative;
     background: black;
     border-radius: 15px;
+    border: solid 1px #333;
   }
   
   .screen:after {

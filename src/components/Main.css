@@ -4,7 +4,7 @@
     width: 100vw;
     height:100vh;
     z-index: 1;
-    background-image: linear-gradient(to bottom right, #fff 85%, rgb(144, 19, 247) 15% );
+    background-image: linear-gradient(to bottom right, #fff 84%,rgb(144, 19, 247) 16% );
     border-top-left-radius: 24%;
   }
   @keyframes seen{
