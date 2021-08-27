@@ -92,7 +92,7 @@
   top: 3.2rem;
   right: 1rem;
   width: 40vw;
-  height: 50vh;
+  height: fit-content;
   opacity: 1;
   z-index: 12;
   border: 1px solid black;
