@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const longText = `
-Yaptığım başka bir siteden alınmış bu klip, sadece yerli firmaların taptığı ve hepsinin birbirinin kopyası şeklinde 
-görünmesine neden olan "reveal on scroll" efektini ben de yapabiliyorum demek amaçlı buraya konmuştur.
+Yaptığım başka bir siteden alınmış bu klip, yerli firmalara "reveal on scroll" efektini yapabiliyorum demek amacıyla buraya konulmuştur.
+Yapabiliyorum ama bu sürekli, her projede kulanmam gerekiyor anlamına gelmiyor. Mesela bu site sorunlarınıza kurumsal çözümler sunmak için değil :)
 `;
 
 export default function Tool() {
