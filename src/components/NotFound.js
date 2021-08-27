@@ -1,5 +1,5 @@
 
-export default function Default(){
+export default function NotFound(){
 
 
     const style = {

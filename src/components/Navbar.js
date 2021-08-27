@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Redirect, Switch } from 'react-router-dom';
 import "./Navbar.css";
 import {FaHome} from "react-icons/fa";
 import Contact from './contact/Contact';
@@ -8,7 +8,7 @@ import Main from "./Main";
 import Fetch from "./fetch/Fetch";
 import Repository from "./repositories/Repository";
 import Code from "./codes/Code";
-import Default from "./Default";
+import NotFound from "./NotFound";
 import TemporaryDrawer from "./drawer/Drawer"
 
 
@@ -55,7 +55,7 @@ export default function Navbar() {
                     </div>
 
                 </nav>
-                <div>
+                <Switch>
                     <Route exact path="/">
                       <Redirect to="/home"/>  
                     </Route>
@@ -73,10 +73,10 @@ export default function Navbar() {
                         <Fetch/>
                     </Route>
                     <Route path='*'>
-                        <Default/>
+                        <NotFound/>
                     </Route>
 
-                </div>
+                </Switch>
             </Router>
             {show && <Backdrop onClick={closeModal} />}
             {show && <Contact onClick={closeModal} />}
