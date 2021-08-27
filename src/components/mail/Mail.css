@@ -4,8 +4,7 @@
     height: fit-content;
     position: fixed;
     bottom: -31.2rem;
-    left: 50%;
-    transform: translate(-50%,0);
+    right: 0px;
     overflow: hidden;
     z-index: 13;
     animation-name: showMail;
@@ -13,6 +12,7 @@
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
+    opacity: 1;
 
 }
 .mailMainToClose{
@@ -20,8 +20,7 @@
     height: fit-content;
     position: fixed;
     bottom: 3rem;
-    left: 50%;
-    transform: translate(-50%,0);
+    right: 0px;
     overflow: hidden;
     z-index: 13; 
     animation-name: hideMail;
@@ -29,16 +28,21 @@
     animation-delay: 0s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
+    opacity: 0.5;
 
+}
+
+.mailMainToClose:hover{
+  opacity: 1 !important;
 }
 
 @keyframes showMail {
     from {bottom:-31.2rem;}
-    to {bottom:2rem;}
+    to {bottom:2rem; opacity: 1;}
   }
 @keyframes hideMail {
-    from {bottom: 2rem;}
-    to {bottom:-31.2rem;}
+    from {bottom: 2rem; opacity: 1;}
+    to {bottom:-31.2rem; opacity: 0.5;}
   }
 
   .screen {
@@ -69,6 +73,7 @@
     background: black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    
     
   }
  
@@ -103,6 +108,7 @@
     display: flex;
     cursor: pointer;
     border-radius: 10% !important;
+    opacity:1 !important;
   }
   .screen-header-right :hover {
    background-color: #3e3e3e;

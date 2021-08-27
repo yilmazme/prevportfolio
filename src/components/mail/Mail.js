@@ -75,16 +75,17 @@ const myPhone = useRef();
         <div className={open===true? "mailMainToOpen" : "mailMainToClose"} >
             <div className="screen">
                 <div className="screen-header">
+                <div className="screen-header-right" onClick={()=>setOpen(!open)}>
+                    {open===true? <ArrowDropDownIcon className="text-danger fs-2"/> : <ArrowDropUpIcon className="text-success fs-2"/>}
+                    </div>
+                    
+                    <div className="screen-header-center text-center">
+                        <h3 className="text-center text-info">{open===true? "No, maybe later" : "Text to me"}</h3>
+                    </div>
                     <div className="screen-header-left">
                         <div className="screen-header-button close"></div>
                         <div className="screen-header-button maximize"></div>
                         <div className="screen-header-button minimize"></div>
-                    </div>
-                    <div className="screen-header-center text-center">
-                        <h3 className="text-center text-info">{open===true? "No, maybe later" : "Text to me"}</h3>
-                    </div>
-                    <div className="screen-header-right" onClick={()=>setOpen(!open)}>
-                    {open===true? <ArrowDropDownIcon className="text-danger fs-2"/> : <ArrowDropUpIcon className="text-success fs-2"/>}
                     </div>
                 </div>
                 <div className="screen-body">
