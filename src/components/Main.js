@@ -4,10 +4,10 @@ import { FaMapPin } from "react-icons/fa";
 import mypic from "../pictures/mypic.jpg"
 import Contact from "./contact/Contact";
 import Backdrop from "./contact/Backdrop";
-//import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import Carous from "./carousel/Carousel";
-import SyncAltIcon from '@material-ui/icons/SyncAlt';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import MarkunreadIcon from '@material-ui/icons/Markunread';
 
 export default function Main() {
 
@@ -48,27 +48,44 @@ export default function Main() {
 
             <div className="div5 ">
                 <h3 className="h4 text-left pl-9 pt-2">Works</h3>
-                <p className="text-right text-white pr-2">
-                    < SyncAltIcon className="searchIcon" onClick={() => setState({ work: !state.work, code: false, api: false, contact: false })} />
-                </p>
+                {state.work?
+                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: !state.work, code: false, api: false, contact: false })} />
+                    :
+                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: !state.work, code: false, api: false, contact: false })} />
+                }
 
             </div>
             <div className="div4 ">
                 <h3 className="h4 text-left pl-9 pt-2">Code Snippets </h3>
                 <p className="text-right text-white pr-2">
-                    < SyncAltIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
+                    {state.code?
+                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
+                    :
+                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: !state.code, api: false, contact: false })} />
+                }
+                    
                 </p>
             </div>
             <div className="div3 ">
                 <h3 className="h4 text-left pl-9 pt-2">API Fetch Example</h3>
 
                 <p className="text-right text-white pr-2">
-                    < SyncAltIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
+                {state.api?
+                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
+                    :
+                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: !state.api, contact: false })} />
+                }
                 </p>
             </div>
             <div className="div2 ">
                 <h3 className="h4 text-left pl-9 pt-2">Contact</h3>
-                < SyncAltIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact: !state.contact })} />
+                <p className="text-right text-white pr-2">
+                {state.contact?
+                    < DraftsIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact:!state.contact })} />
+                    :
+                    < MarkunreadIcon className="searchIcon" onClick={() => setState({ work: false, code: false, api: false, contact: !state.contact })} />
+                }
+                </p>
 
             </div>
             <div className={state.work ? "workDiv showAnimeClass" : "workDiv hideAnimeClass"}>

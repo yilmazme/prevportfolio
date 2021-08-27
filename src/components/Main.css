@@ -90,17 +90,15 @@
   top: 0.5rem;
   right: 0.5rem;
   cursor: pointer;
-  background-color: white;
-  color: black;
+  color: rgb(255, 246, 234);
+  background-color:inherit;
   border-radius: 50%;
 }
 .searchIcon:hover{
-  background-color: rgb(199, 199, 36);
-  color: black;
+  color: yellow;
 }
 .searchIcon:active{
-  background-color: red;
-  color: white;
+  color: red;
 }
 
 .myCard{
@@ -138,7 +136,7 @@
   z-index: 1;
 }
 .workDiv{
-  background-color: rgb(45, 73, 92);
+  background-color: rgb(247, 180, 99);
   position: absolute;
   top: 3.2rem;
   left: 14rem;
@@ -157,7 +155,7 @@
 }
 
 .codeDiv{
-  background-color: rgb(156, 228, 139);
+  background-color: rgb(247, 180, 99);
   position: absolute;
   top: 6.2rem;
   left: 11rem ;
@@ -169,7 +167,7 @@
   border-radius: 2%;
 }
 .apiDiv{
-  background-color: rgb(235, 123, 207);
+  background-color: rgb(247, 180, 99);
   position: absolute;
   top: 9.2rem;
   left: 8rem ;
@@ -181,7 +179,7 @@
   border-radius: 2%;
 }
 .contactDiv{
-  background-color: rgb(247, 137, 137);
+  background-color: rgb(247, 180, 99);
   position: absolute;
   top: 12.2rem;
   left: 5rem ;
