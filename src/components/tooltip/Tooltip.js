@@ -26,7 +26,7 @@ export default function Tool() {
   return (
     <div>
       <Tooltip title={longText} classes={{ tooltip: classes.customWidth }}>
-        <button className={classes.button}>Warning!</button>
+        <button className={classes.button}>Info</button>
       </Tooltip>
     </div>
   );
