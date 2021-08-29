@@ -16,8 +16,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const longText = `
-Yaptığım başka bir siteden alınmış bu klip, yerli firmalara "reveal on scroll" efektini yapabiliyorum demek amacıyla buraya konulmuştur.
-Yapabiliyorum ama bu sürekli, her projede kulanmam gerekiyor anlamına gelmiyor. Mesela bu portfolio syafası sorunlarınıza kurumsal çözümler sunmak için değil :)
+A fullstack project with NodeJS and MongoDB
 `;
 
 export default function Tool() {
@@ -26,7 +25,7 @@ export default function Tool() {
   return (
     <div>
       <Tooltip title={longText} classes={{ tooltip: classes.customWidth }}>
-        <button className={classes.button}>Info</button>
+        <button className={classes.button}>Must see</button>
       </Tooltip>
     </div>
   );
