@@ -46,6 +46,11 @@ export default function TemporaryDrawer() {
       <List>
           <ListItem>
             <ListItemIcon> <GitHubIcon className="text-warning"/></ListItemIcon>
+            <a href="https://myilmaz.netlify.app/" target="_#">Go to New Site</a>
+          </ListItem>
+          <br/>
+          <ListItem>
+            <ListItemIcon> <GitHubIcon className="text-warning"/></ListItemIcon>
             <a href="https://github.com/yilmazme" target="_#">Go to GitHub</a>
           </ListItem>
           <br/>
