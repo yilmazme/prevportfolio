@@ -53,11 +53,6 @@ export default function TemporaryDrawer() {
             <ListItemIcon> <GitHubIcon className="text-warning"/></ListItemIcon>
             <a href="https://github.com/yilmazme" target="_#">Go to GitHub</a>
           </ListItem>
-          <br/>
-          <ListItem>
-            <ListItemIcon> <LanguageIcon className="text-warning"/></ListItemIcon>
-            <a href="https://my-old-portfolio.netlify.app/" target="_#">Go to Old Site</a>
-          </ListItem>
       </List>
     </div>
   );
